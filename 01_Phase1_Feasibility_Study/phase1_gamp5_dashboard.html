@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MP1P-Ferring Denester — GAMP 5 Roadmap & Phase 1 Feasibility</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 md:p-6 space-y-5">
+  <!-- Header -->
+  <header class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 md:p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="space-y-1">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+        <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold">ISPE GAMP 5 (Cat. 4)</span>
+        <span class="px-2 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)]">MP1P-Ferring (C6060007S_12)</span>
+        <span id="badge-phase" class="px-2 py-0.5 rounded border border-[var(--warning)] text-[var(--warning)] font-semibold">Phase 1 Active — Gate 1 Pending</span>
+      </div>
+      <h1 id="hdr-title" class="text-lg md:text-xl font-bold tracking-tight">
+        Syringe Nest Denester Modernization — S7-300 &amp; ProTool to S7-1500 &amp; WinCC Unified
+      </h1>
+      <p id="hdr-sub" class="text-xs md:text-sm text-[var(--muted-foreground)]">
+        4-Phase GAMP 5 Lifecycle Roadmap, Quantitative FMEA Risk Register &amp; Stakeholder Kick-Off Deck (Hardwired VI Validation Firewall)
+      </p>
+    </div>
+    <div class="flex items-center gap-2 shrink-0">
+      <button id="btn-en" onclick="setLang('en')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] transition">EN — English</button>
+      <button id="btn-de" onclick="setLang('de')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] transition">DE — Deutsch</button>
+    </div>
+  </header>
+
+  <!-- Critical Discovery Banner -->
+  <section class="bg-[var(--card)] border-l-4 border-[var(--error)] border-y border-r border-[var(--border)] rounded-r-xl p-4 space-y-1">
+    <div class="flex items-center justify-between gap-2">
+      <span id="alert-title" class="text-xs font-bold uppercase tracking-wider text-[var(--error)]">
+        Critical Code-Verified Discovery (R-01 | RPN = 125) — Day-1 Containment Required
+      </span>
+      <span class="text-xs font-mono text-[var(--muted-foreground)]">DB20 / DB21 / DB106 = 0 Offline</span>
+    </div>
+    <p id="alert-body" class="text-xs md:text-sm text-[var(--foreground)]">
+      Offline STEP 7 inspection proves X/Y proportional valve velocities, ramps &amp; holding pressures (<code>DB20</code>/<code>DB21</code>) and gripper timers (<code>DB106</code>) are all <strong>0</strong> offline. Live production values reside exclusively in the discontinued <code>TP170B Color</code> (PM490 EOL 2017) Flash memory. Complete the Day-1 Backup Checklist before cycling machine power.
+    </p>
+  </section>
+
+  <!-- KPI Strip -->
+  <section class="grid grid-cols-2 md:grid-cols-5 gap-3">
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3">
+      <div id="kpi1-lbl" class="text-xs text-[var(--muted-foreground)]">Verified Field I/O</div>
+      <div class="text-xl font-bold font-mono mt-0.5">63 Tags</div>
+      <div class="text-xs text-[var(--muted-foreground)] mt-0.5">362 EN/DE Symbols</div>
+    </div>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3">
+      <div id="kpi2-lbl" class="text-xs text-[var(--muted-foreground)]">PLC Blocks (0 Protected)</div>
+      <div class="text-xl font-bold font-mono mt-0.5">31 Blocks</div>
+      <div class="text-xs text-[var(--success)] mt-0.5">100% Match vs 2016 Backup</div>
+    </div>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3">
+      <div id="kpi3-lbl" class="text-xs text-[var(--muted-foreground)]">Panel Cutout Match</div>
+      <div class="text-xl font-bold font-mono mt-0.5">197×141 mm</div>
+      <div class="text-xs text-[var(--success)] mt-0.5">MTP700 Drop-In (0 Cutting)</div>
+    </div>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3">
+      <div id="kpi4-lbl" class="text-xs text-[var(--muted-foreground)]">VI Validation Impact</div>
+      <div class="text-xl font-bold font-mono mt-0.5">0 Re-Qual</div>
+      <div class="text-xs text-[var(--muted-foreground)] mt-0.5">Hardwired J291 / B293 / UE76</div>
+    </div>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-3 col-span-2 md:col-span-1">
+      <div id="kpi5-lbl" class="text-xs text-[var(--muted-foreground)]">Critical FMEA Risks</div>
+      <div class="text-xl font-bold font-mono text-[var(--error)] mt-0.5">4 Critical</div>
+      <div class="text-xs text-[var(--muted-foreground)] mt-0.5">Max RPN 125 (TP170B Flash)</div>
+    </div>
+  </section>
+
+  <!-- Navigation Tabs -->
+  <nav class="flex flex-wrap gap-2 border-b border-[var(--border)] pb-2">
+    <button onclick="setTab('roadmap')" id="tab-roadmap" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)]">1. 4-Phase GAMP 5 Roadmap</button>
+    <button onclick="setTab('options')" id="tab-options" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)]">2. Modernization Options (0–3)</button>
+    <button onclick="setTab('fmea')" id="tab-fmea" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)]">3. FMEA Risk Register (12)</button>
+    <button onclick="setTab('kickoff')" id="tab-kickoff" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)]">4. Stakeholder Kick-Offs &amp; Gate 1</button>
+    <button onclick="setTab('baseline')" id="tab-baseline" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)]">5. Nest Pitch &amp; VI Firewall</button>
+  </nav>
+
+  <!-- TAB 1: 4-PHASE GAMP 5 ROADMAP -->
+  <main id="view-roadmap" class="space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-3" id="phase-cards"></div>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-3" id="phase-detail"></div>
+  </main>
+
+  <!-- TAB 2: OPTIONS 0-3 -->
+  <main id="view-options" class="hidden space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="options-grid"></div>
+  </main>
+
+  <!-- TAB 3: FMEA RISK REGISTER -->
+  <main id="view-fmea" class="hidden space-y-3">
+    <div class="flex flex-wrap items-center justify-between gap-2 bg-[var(--card)] border border-[var(--border)] rounded-xl p-3">
+      <div class="flex flex-wrap gap-1.5">
+        <button onclick="filterRisk('ALL')" id="rf-ALL" class="px-2.5 py-1 rounded text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)]">All (12)</button>
+        <button onclick="filterRisk('CRITICAL')" id="rf-CRITICAL" class="px-2.5 py-1 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">CRITICAL (4)</button>
+        <button onclick="filterRisk('HIGH')" id="rf-HIGH" class="px-2.5 py-1 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">HIGH (3)</button>
+        <button onclick="filterRisk('MEDIUM')" id="rf-MEDIUM" class="px-2.5 py-1 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">MEDIUM / LOW (5)</button>
+      </div>
+      <span class="text-xs font-mono text-[var(--muted-foreground)]">RPN = Severity (S) × Likelihood (L) × Detectability (D)</span>
+    </div>
+    <div class="overflow-x-auto bg-[var(--card)] border border-[var(--border)] rounded-xl">
+      <table class="w-full text-left border-collapse text-xs">
+        <thead>
+          <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+            <th class="p-3">ID</th>
+            <th class="p-3">Asset / Tag</th>
+            <th class="p-3">Finding</th>
+            <th class="p-3 text-center">S×L×D</th>
+            <th class="p-3 text-center">RPN</th>
+            <th class="p-3">Day-1 / Phase 2–3 Mitigation</th>
+          </tr>
+        </thead>
+        <tbody id="fmea-tbody" class="divide-y divide-[var(--border)]"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- TAB 4: STAKEHOLDER KICK-OFFS -->
+  <main id="view-kickoff" class="hidden space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="stakeholder-grid"></div>
+  </main>
+
+  <!-- TAB 5: NEST RECIPES & VI FIREWALL -->
+  <main id="view-baseline" class="hidden space-y-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 id="nest-title" class="text-sm font-bold">Offline Syringe-Nest Pitch Tables (BQ281 Encoder)</h3>
+          <div class="flex gap-1">
+            <button onclick="setNest(64)" id="nb-64" class="px-2.5 py-1 rounded text-xs font-mono bg-[var(--primary)] text-[var(--primary-foreground)]">64-Nest (DB12)</button>
+            <button onclick="setNest(100)" id="nb-100" class="px-2.5 py-1 rounded text-xs font-mono bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">100-Nest (DB10)</button>
+            <button onclick="setNest(160)" id="nb-160" class="px-2.5 py-1 rounded text-xs font-mono bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">160-Nest (DB11)</button>
+          </div>
+        </div>
+        <div id="nest-bars" class="space-y-1.5 pt-1"></div>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-3">
+        <h3 id="vi-title" class="text-sm font-bold">Hardwired 24VDC Visual Inspection (VI) Validation Firewall</h3>
+        <p id="vi-desc" class="text-xs text-[var(--muted-foreground)]">
+          Zero MPI/PROFINET/OPC UA coupling exists to the downstream VI system. Preserving these 4 discrete 24VDC signals avoids triggering downstream VI re-validation:
+        </p>
+        <div class="space-y-2 text-xs font-mono">
+          <div class="p-2.5 rounded-lg border border-[var(--border)] flex justify-between items-center">
+            <span><strong>J291</strong> (I 125.0 — DI)</span>
+            <span class="text-[var(--muted-foreground)]">Downstream VI Ready / Nachfolgemaschine bereit</span>
+          </div>
+          <div class="p-2.5 rounded-lg border border-[var(--border)] flex justify-between items-center">
+            <span><strong>B293</strong> (I 125.2 — DI)</span>
+            <span class="text-[var(--muted-foreground)]">Outfeed Max Level / Auslaufstau maximal</span>
+          </div>
+          <div class="p-2.5 rounded-lg border border-[var(--border)] flex justify-between items-center">
+            <span><strong>UE76_RUN</strong> (Q 125.1 — DO)</span>
+            <span class="text-[var(--muted-foreground)]">VI Connecting Belt RUN / Verb.band EIN</span>
+          </div>
+          <div class="p-2.5 rounded-lg border border-[var(--border)] flex justify-between items-center">
+            <span><strong>UE76_OK</strong> (I 125.3 — DI)</span>
+            <span class="text-[var(--muted-foreground)]">VI Connecting Belt OK / Verb.band OK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let lang = 'en';
+    let activePhase = 0;
+    let activeRiskFilter = 'ALL';
+    let activeNest = 64;
+
+    const i18n = {
+      en: {
+        badgePhase: 'Phase 1 Active — Gate 1 Pending',
+        hdrTitle: 'Syringe Nest Denester Modernization — S7-300 & ProTool to S7-1500 & WinCC Unified',
+        hdrSub: '4-Phase GAMP 5 Lifecycle Roadmap, Quantitative FMEA Risk Register & Stakeholder Kick-Off Deck (Hardwired VI Validation Firewall)',
+        alertTitle: 'Critical Code-Verified Discovery (R-01 | RPN = 125) — Day-1 Containment Required',
+        alertBody: 'Offline STEP 7 inspection proves X/Y proportional valve velocities, ramps & holding pressures (DB20/DB21) and gripper timers (DB106) are all 0 offline. Live production values reside exclusively in the discontinued TP170B Color (PM490 EOL 2017) Flash memory. Complete the Day-1 Backup Checklist before cycling machine power.',
+        tabs: ['1. 4-Phase GAMP 5 Roadmap', '2. Modernization Options (0–3)', '3. FMEA Risk Register (12)', '4. Stakeholder Kick-Offs & Gate 1', '5. Nest Pitch & VI Firewall'],
+        phases: [
+          {
+            num: 'Phase 1', status: 'ACTIVE NOW', title: 'Feasibility Study & Stakeholder Planning',
+            gate: 'Gate 1: Charter, Option & CAPEX Approval', duration: 'Weeks 1–2 | 0d Line Outage',
+            items: [
+              'Byte-verified inventory of C6060007S_12.zip (63 I/O, 31 blocks, 37 ProTool screens, 0 MC7 diffs vs 2016 backup)',
+              'Day-1 Containment (C-1..C-4): Capture live TP170B Flash parameters (DB20/DB21/DB106) + ProSave backup + OEM nameplates',
+              'Kick-off alignment with Engineering, VI Process Engineer & System Owner (Hardwired VI Firewall agreed)',
+              'Select Option 1 (Controls & Safety Retrofit, €28k–€42k) vs Option 2 (+ Servo X/Y, €58k–€85k)'
+            ]
+          },
+          {
+            num: 'Phase 2', status: 'IF APPROVED', title: 'Programming & Detailed GAMP 5 Planning',
+            gate: 'Gate 2: Design Freeze & Protocol Pre-Approval', duration: 'Weeks 3–8 | 0d Line Outage',
+            items: [
+              'Open Change Control + author GAMP 5 Category 4 Validation Plan (VP), URS, FRS/HDS/SDS, FRA & RTM',
+              'TIA Portal V19/V20 engineering: CPU 1512C-1 PN + High_Speed_Counter TO (BQ281) + retentive DB10–12 / DB20–21',
+              'Rebuild 37 screens natively on MTP700 Unified Comfort (EN/DE toggle, RBAC, Parameter Audit Trail, lock FORZA_USCITE)',
+              'Execute S7-PLCSIM Advanced offline simulation & obtain QA pre-approval of FAT/SAT/IQ/OQ/PQ protocols'
+            ]
+          },
+          {
+            num: 'Phase 3', status: 'IMPLEMENTATION', title: 'Panel Pre-Build, FAT, Cutover & SAT',
+            gate: 'Gate 3: SAT Sign-Off & Qualification Readiness', duration: 'Weeks 9–11 | 2–3d Planned Outage',
+            items: [
+              'Pre-wire S7-1500 DIN sub-plate + new EN ISO 13849-1 safety relay (replacing 20-yr UE142) & run bench FAT',
+              'Drop-in install MTP700 Unified Comfort into exact 197 × 141 mm TP170B cutout (zero stainless cutting)',
+              '100% point-to-point loop check across all 63 I/O tags + verify 24VDC isolation on J291 / B293 / UE76',
+              'Calibrate YV263/YV266 proportional ramps & BQ281 encoder indexing; complete Site Acceptance Test (SAT)'
+            ]
+          },
+          {
+            num: 'Phase 4', status: 'REQUALIFICATION', title: 'GAMP 5 IQ, OQ, PQ & GMP Release',
+            gate: 'Gate 4: VSR Sign-Off & Production Release', duration: 'Weeks 11–13 | 2–3d Qualification',
+            items: [
+              'IQ: Verify BOM serials/firmware, EPLAN redlines, backup/restore & WinCC Unified security hardening',
+              'OQ: Challenge safety circuit, Annex 11 RBAC & Audit Trail, and Hardwired VI Firewall (Zero VI Re-Validation)',
+              'PQ: Run 64, 100 & 160 glass syringe nests into VI with VI Process Engineer (0 glass damage, target UPH met)',
+              'Close Requirements Traceability Matrix (RTM), update SOPs/training & sign Validation Summary Report (VSR)'
+            ]
+          }
+        ],
+        options: [
+          {
+            code: 'Option 0', badge: 'Baseline Risk Benchmark', rec: false,
+            name: 'Status Quo / Run-to-Failure', capex: '€0 Upfront (€80k–€250k+ Risk)', outage: 'Unplanned Weeks',
+            pros: 'Zero near-term engineering spend.',
+            cons: 'TP170B PM490 discontinued (2017) with unbacked Flash DB20/DB21; S7-300 PM410 discontinued; UE142 past 20-yr ISO 13849 mission time; non-compliant raw forcing.'
+          },
+          {
+            code: 'Option 1', badge: 'RECOMMENDED BASELINE', rec: true,
+            name: 'Controls & Safety Retrofit (S7-1512C-1 PN + MTP700 Unified)', capex: '€28k – €42k ROM', outage: '2 – 3 Days Planned',
+            pros: 'Exact 197×141 mm HMI drop-in; eliminates PLC/HMI/UE142 obsolescence; full Annex 11 RBAC & Audit Trail; Zero Downstream VI Re-Qualification.',
+            cons: 'Retains pneumatic proportional valves YV263/YV266 (mitigated via overhaul/spare if cosmetic quality is already acceptable).'
+          },
+          {
+            code: 'Option 2', badge: 'Process Upgrade Option', rec: false,
+            name: 'Controls + SINAMICS S210 Electric Servo X/Y Upgrade', capex: '€58k – €85k ROM', outage: '5 – 7 Days Planned',
+            pros: 'Eliminates pneumatic zero-drift (TARATURA ASSE X/Y) & air-pressure sensitivity; closed-loop torque/velocity profiles for delicate glass syringes.',
+            cons: 'Higher CAPEX, mechanical gantry redesign, CE machinery safety update, and longer cutover outage.'
+          },
+          {
+            code: 'Option 3', badge: 'Full Asset Replacement', rec: false,
+            name: 'New OEM Syringe Denester Machine', capex: '€220k – €350k+ ROM', outage: '3 – 5 Weeks',
+            pros: 'Brand-new mechanical frame and OEM warranty.',
+            cons: '36–52 wk lead time, cleanroom rigging, conveyor modifications & full VI line re-qualification.'
+          }
+        ],
+        stakeholders: [
+          {
+            role: '1. Engineering & Maintenance', doc: '01_Engineering_Kickoff_Pack.md',
+            focus: 'CAPEX, BOM, 197×141 mm cutout, VFD spares & Day-1 walkdown',
+            checks: [
+              'Approve Day-1 TP170B ProSave & RAM upload (C-1/C-2)',
+              'Confirm Option 1 (€28k–€42k) vs Option 2 (€58k–€85k)',
+              'Verify YV263/YV266 signal (0–10V / +-10V / 4–20mA)',
+              'Decide UE71/UE76 VFD replacement vs spare stock'
+            ]
+          },
+          {
+            role: '2. VI Process Engineer', doc: '02_VI_Process_Engineer_Kickoff_Pack.md',
+            focus: '64/100/160 syringe nests, glass cosmetics, X/Y drift & PQ criteria',
+            checks: [
+              'Confirm active & future syringe nest formats (64/100/160)',
+              'Assess YV263/YV266 pneumatic drift & syringe scuff history',
+              'Define locked recipe vs operator-adjustable parameters',
+              'Set Phase 4 PQ nest counts & VI cosmetic defect limits'
+            ]
+          },
+          {
+            role: '3. System Owner & QA/CSV', doc: '03_System_Owner_and_QA_Kickoff_Pack.md',
+            focus: 'GAMP 5 Cat. 4, Hardwired VI Firewall & Annex 11 Audit Trail',
+            checks: [
+              'Confirm Hardwired 24VDC VI Firewall (Zero VI Re-Qual)',
+              'Approve WinCC Unified RBAC + Parameter Audit Trail',
+              'Approve removal of raw FORZA_USCITE forcing in production',
+              'Confirm EN + DE bilingual operator runtime screens'
+            ]
+          }
+        ]
+      },
+      de: {
+        badgePhase: 'Phase 1 Aktiv — Gate 1 Ausstehend',
+        hdrTitle: 'Modernisierung Spritzen-Denester — S7-300 & ProTool auf S7-1500 & WinCC Unified',
+        hdrSub: '4-Phasen-GAMP-5-Roadmap, Quantitative FMEA-Risikobewertung & Stakeholder-Kick-Off (Festverdrahtete VI-Validierungsgrenze)',
+        alertTitle: 'Kritischer Code-Befund (R-01 | RPN = 125) — Tag-1-Sofortmaßnahme erforderlich',
+        alertBody: 'Im Offline-STEP-7-Projekt stehen alle X/Y-Proportionalventil-Geschwindigkeiten, Rampen & Haltedrücke (DB20/DB21) sowie Greifer-Timer (DB106) auf 0. Die realen Produktionswerte liegen ausschließlich im Flash des abgekündigten TP170B Color (PM490 seit 2017). Vor jedem Ausschalten zwingend Tag-1-Backup durchführen!',
+        tabs: ['1. 4-Phasen GAMP-5-Roadmap', '2. Umbau-Optionen (0–3)', '3. FMEA-Risikoregister (12)', '4. Stakeholder-Kick-Offs & Gate 1', '5. Nest-Rezepte & VI-Grenze'],
+        phases: [
+          {
+            num: 'Phase 1', status: 'AKTIV', title: 'Machbarkeitsstudie & Stakeholder-Planung',
+            gate: 'Gate 1: Projektcharter, Options- & CAPEX-Freigabe', duration: 'Woche 1–2 | 0 Tage Linienstopp',
+            items: [
+              'Byte-genaue Bestandsaufnahme aus C6060007S_12.zip (63 E/A, 31 Bausteine, 37 ProTool-Bilder, 0 MC7-Diffs ggü. 2016)',
+              'Sofortmaßnahmen (C-1..C-4): Live-Parameter (DB20/DB21/DB106) & ProSave-Image vom TP170B sichern + Typenschilder erfassen',
+              'Kick-Off-Abstimmung mit Engineering, VI-Prozessingenieur & System Owner (Festverdrahtete VI-Schnittstelle)',
+              'Auswahl Option 1 (Steuerungs-Retrofit, 28–42 T€) vs. Option 2 (+ Servo X/Y, 58–85 T€)'
+            ]
+          },
+          {
+            num: 'Phase 2', status: 'NACH FREIGABE', title: 'Programmierung & GAMP-5-Detailplanung',
+            gate: 'Gate 2: Design-Freeze & Protokoll-Vorabfreigabe', duration: 'Woche 3–8 | 0 Tage Linienstopp',
+            items: [
+              'Change Control eröffnen + GAMP-5-Dokumentation (VP, URS, FRS/HDS/SDS, FRA & RTM) erstellen',
+              'TIA Portal V19/V20: CPU 1512C-1 PN + High_Speed_Counter TO (BQ281) + remanente Rezept-DBs (DB10–12 / DB20–21)',
+              'Neuaufbau der 37 Bedienbilder auf MTP700 Unified Comfort (EN/DE-Umschaltung, RBAC, Audit-Trail, Sperre FORZA_USCITE)',
+              'Offline-Simulation mit S7-PLCSIM Advanced & QA-Vorabfreigabe der FAT/SAT/IQ/OQ/PQ-Protokolle'
+            ]
+          },
+          {
+            num: 'Phase 3', status: 'IMPLEMENTIERUNG', title: 'Vormontage, FAT, Umbau & SAT',
+            gate: 'Gate 3: SAT-Abnahme & Qualifizierungsbereitschaft', duration: 'Woche 9–11 | 2–3 Tage Stillstand',
+            items: [
+              'Vormontage S7-1500-Tragschiene + neues Sicherheitsrelais (Ersatz 20 J. UE142) inkl. Prüfstands-FAT',
+              '1:1-Einbau MTP700 Unified Comfort in vorhandenen 197 × 141 mm Ausschnitt (keine Edelstahlarbeiten im Reinraum)',
+              '100% E/A-Loop-Check aller 63 Signale + Nachweis der 24-VDC-Trennung zur VI-Linie (J291 / B293 / UE76)',
+              'Kalibrierung Proportionalventile YV263/YV266 & Encoder BQ281; Durchführung Site Acceptance Test (SAT)'
+            ]
+          },
+          {
+            num: 'Phase 4', status: 'REQUALIFIZIERUNG', title: 'GAMP 5 IQ, OQ, PQ & GMP-Freigabe',
+            gate: 'Gate 4: VSR-Freigabe für GMP-Produktion', duration: 'Woche 11–13 | 2–3 Tage Qualifizierung',
+            items: [
+              'IQ: Prüfung Stückliste/Seriennummern/Firmware, EPLAN-Revision, Backup/Restore & Security-Härtung',
+              'OQ: Sicherheitskreis-Test, Annex-11-RBAC & Audit-Trail sowie Nachweis der VI-Validierungsgrenze (0 VI-Revalidierung)',
+              'PQ: Produktionsläufe mit 64er, 100er & 160er Spritzennestern mit VI-Prozessingenieur (0 Glasbruch, Ziel-UPH erreicht)',
+              'Abschluss Traceability Matrix (RTM), SOP-/Schulungsupdate & Validierungsabschlussbericht (VSR)'
+            ]
+          }
+        ],
+        options: [
+          {
+            code: 'Option 0', badge: 'Risiko-Referenz', rec: false,
+            name: 'Status Quo / Weiterbetrieb bis Ausfall', capex: '0 € Vorab (80–250+ T€ Ausfallrisiko)', outage: 'Wochen ungeplant',
+            pros: 'Keine unmittelbaren Projektkosten.',
+            cons: 'TP170B seit 2017 PM490-abgekündigt (ungesicherte Flash-Rezepte DB20/21); S7-300 PM410-abgekündigt; UE142 >20 J. Gebrauchsdauer; keine Annex-11-Konformität.'
+          },
+          {
+            code: 'Option 1', badge: 'EMPFOHLENE BASISOPTION', rec: true,
+            name: 'Steuerungs- & Sicherheits-Retrofit (CPU 1512C-1 PN + MTP700 Unified)', capex: '28 T€ – 42 T€ ROM', outage: '2 – 3 Tage geplant',
+            pros: 'Exakter 197×141 mm Panel-Ausschnitt; beseitigt SPS/HMI/UE142-Obsoleszenz; voller Annex-11-Audit-Trail; Keine Revalidierung der VI-Linie.',
+            cons: 'Behält pneumatische Proportionalventile YV263/YV266 bei (Ersatzventil/Wartung empfohlen, sofern Glasqualität heute stabil).'
+          },
+          {
+            code: 'Option 2', badge: 'Prozess-Upgrade', rec: false,
+            name: 'Steuerung + Elektrische Servoachsen X/Y (SINAMICS S210)', capex: '58 T€ – 85 T€ ROM', outage: '5 – 7 Tage geplant',
+            pros: 'Eliminiert Pneumatik-Drift (TARATURA ASSE X/Y) & Druckluftschwankungen; geschlossene Lageregelung für empfindliche Glasspritzen.',
+            cons: 'Höherer CAPEX, mechanischer Umbau, erweiterte CE-Sicherheitsbewertung und längerer Linien-Stillstand.'
+          },
+          {
+            code: 'Option 3', badge: 'Komplett-Neuanlage', rec: false,
+            name: 'Neuer OEM-Spritzen-Denester', capex: '220 T€ – 350+ T€ ROM', outage: '3 – 5 Wochen',
+            pros: 'Komplett neue Mechanik und Herstellergarantie.',
+            cons: '36–52 Wochen Lieferzeit, Reinraum-Einbringung, Bandanpassung & volle VI-Linien-Requalifizierung.'
+          }
+        ],
+        stakeholders: [
+          {
+            role: '1. Engineering & Instandhaltung', doc: '01_Engineering_Kickoff_Pack.md',
+            focus: 'CAPEX, Stückliste, 197×141 mm Ausschnitt, Frequenzumrichter & Walkdown',
+            checks: [
+              'Tag-1 TP170B ProSave-Backup & RAM-Upload freigeben (C-1/C-2)',
+              'Option 1 (28–42 T€) vs. Option 2 (58–85 T€) festlegen',
+              'Analogsignal YV263/YV266 prüfen (0–10V / +-10V / 4–20mA)',
+              'Ersatzstrategie für Umrichter UE71/UE76 entscheiden'
+            ]
+          },
+          {
+            role: '2. VI-Prozessingenieur', doc: '02_VI_Process_Engineer_Kickoff_Pack.md',
+            focus: '64/100/160er Nester, Glaskosmetik, X/Y-Drift & PQ-Kriterien',
+            checks: [
+              'Aktive & künftige Nestformate bestätigen (64/100/160)',
+              'Pneumatik-Drift YV263/YV266 & Glasdefekt-Historie bewerten',
+              'Gesperrte Rezeptparameter vs. Bedienereingriffe abgrenzen',
+              'PQ-Nestanzahl & VI-Akzeptanzkriterien für Phase 4 definieren'
+            ]
+          },
+          {
+            role: '3. System Owner & QA/CSV', doc: '03_System_Owner_and_QA_Kickoff_Pack.md',
+            focus: 'GAMP 5 Kat. 4, Festverdrahtete VI-Grenze & Annex-11-Audit-Trail',
+            checks: [
+              '24-VDC-VI-Validierungsgrenze bestätigen (0 VI-Revalidierung)',
+              'WinCC Unified Benutzerrollen (RBAC) + Audit-Trail freigeben',
+              'Sperrung der FORZA_USCITE-Forcing-Masken im Betrieb bestätigen',
+              'Zweisprachige Bedienoberfläche (EN + DE) freigeben'
+            ]
+          }
+        ]
+      }
+    };
+
+    const risks = [
+      { id: 'R-01', tag: 'TP170B Color + DB20/21/106', find: 'PM490 EOL (2017); X/Y speeds, ramps & timers = 0 offline (Flash-only)', sld: '5×5×5', rpn: 125, tier: 'CRITICAL', mit: 'C-1 Photo + ProSave backup BEFORE power-off; migrate to MTP700 Unified + retentive DBs' },
+      { id: 'R-02', tag: 'CPU 313C (FW V1.0)', find: 'S7-300 PM410 Discontinued (2025-10-01); MPI-only; V1.0 blocked from direct TIA import', sld: '5×4×5', rpn: 100, tier: 'CRITICAL', mit: 'C-2 Online RAM DB upload; replace with CPU 1512C-1 PN' },
+      { id: 'R-03', tag: 'Safety Relay UE142', find: '~2006 relay reached 20-year EN ISO 13849-1 mission time (T_M) in 2026', sld: '5×4×4', rpn: 80, tier: 'CRITICAL', mit: 'C-3 Check mfg date; install new SIRIUS 3SK1 / PNOZsigma PL e relay' },
+      { id: 'R-04', tag: 'ProTool Passwords & FORZA_USCITE', find: 'Shared numeric passwords, 0 audit trail & raw PLC output forcing screen', sld: '4×4×5', rpn: 80, tier: 'CRITICAL', mit: 'C-4 Restrict admin password; deploy WinCC Unified RBAC + Audit + forcing lockout' },
+      { id: 'R-05', tag: 'YV263 / YV266 Proportional Valves', find: '20-yr spool wear & zero drift (TARATURA ASSE X/Y); syringe shock risk', sld: '4×4×4', rpn: 64, tier: 'HIGH', mit: 'Option 1 valve overhaul/spare OR Option 2 SINAMICS S210 servo X/Y' },
+      { id: 'R-06', tag: 'Conveyor VFDs UE71 & UE76', find: '20-yr DC-bus capacitor aging; UE76 trip starves downstream VI machine', sld: '4×4×4', rpn: 64, tier: 'HIGH', mit: 'Capture VFD parameters at walkdown; replace or stock pre-configured VFDs' },
+      { id: 'R-07', tag: 'SM 321 & SM 323 I/O Modules', find: 'S7-300 PM410 Discontinued (2025-10-01); spare cost/lead-time rise', sld: '4×3×4', rpn: 48, tier: 'HIGH', mit: 'Replace with S7-1500 DI 16 + DQ 16 modules (+20% spare channels)' },
+      { id: 'R-08', tag: 'VI Interface (J291/B293/UE76)', find: 'Protocol change would trigger costly downstream VI re-qualification', sld: '5×2×4', rpn: 40, tier: 'MEDIUM', mit: 'Enforce Hardwired 24VDC Validation Firewall in URS & Phase 4 OQ' },
+      { id: 'R-09', tag: 'Classic TP700 Comfort Phase-Out', find: 'Classic Comfort Panels entered PM400 Phase-Out on 2026-01-31', sld: '3×3×4', rpn: 36, tier: 'MEDIUM', mit: 'Specify active SIMATIC MTP700 Unified Comfort (6AV2128-3GB06-0AX1)' },
+      { id: 'R-10', tag: 'Nest Encoder BQ281 (PID 768)', find: 'Coupling/disc wear shifts 64/100/160 syringe row indexing', sld: '4×3×3', rpn: 36, tier: 'MEDIUM', mit: 'Map to CPU 1512C-1 PN High_Speed_Counter TO + stock 1x spare encoder' },
+      { id: 'R-11', tag: 'ProTool V6.0 WinXP Dependency', find: 'Legacy 32-bit VM + MPI adapter incompatible with modern IT security', sld: '3×4×3', rpn: 36, tier: 'MEDIUM', mit: 'Single TIA Portal V19/V20 project over standard PROFINET/Ethernet' },
+      { id: 'R-12', tag: 'SEQ1..3 Reed Switches & Valves', find: 'Sensor drift causes generic step timeouts in FC10 SEQUENCER', sld: '3×3×2', rpn: 18, tier: 'LOW', mit: 'Add explicit sensor step-timeout diagnostics on MTP700 Unified' }
+    ];
+
+    const nestData = {
+      64: { db: 'DB12 (DATI_NEST64_1)', rows: [150, 275, 400, 525, 650, 775, 900, 1025] },
+      100: { db: 'DB10 (DATI_NEST100_1)', rows: [29, 128, 229, 320, 419, 518, 617, 716, 815, 914] },
+      160: { db: 'DB11 (DATI_NEST160_1)', rows: [648, 725, 802, 879, 950, 1033, 1104, 1181, 1258, 1335, 1406, 49, 120, 197, 274, 351] }
+    };
+
+    function renderAll() {
+      const t = i18n[lang];
+      document.getElementById('badge-phase').textContent = t.badgePhase;
+      document.getElementById('hdr-title').textContent = t.hdrTitle;
+      document.getElementById('hdr-sub').textContent = t.hdrSub;
+      document.getElementById('alert-title').textContent = t.alertTitle;
+      document.getElementById('alert-body').textContent = t.alertBody;
+
+      const tabIds = ['tab-roadmap', 'tab-options', 'tab-fmea', 'tab-kickoff', 'tab-baseline'];
+      tabIds.forEach((id, i) => { document.getElementById(id).textContent = t.tabs[i]; });
+
+      renderRoadmap();
+      renderOptions();
+      renderFmea();
+      renderStakeholders();
+      renderNest();
+    }
+
+    function renderRoadmap() {
+      const phases = i18n[lang].phases;
+      const cardsEl = document.getElementById('phase-cards');
+      cardsEl.innerHTML = phases.map((p, idx) => {
+        const selected = idx === activePhase;
+        const borderCls = selected ? 'border-[var(--primary)] ring-1 ring-[var(--primary)]' : 'border-[var(--border)]';
+        return `
+          <button onclick="selectPhase(${idx})" class="text-left bg-[var(--card)] border ${borderCls} rounded-xl p-3.5 space-y-1.5 transition hover:border-[var(--primary)]">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="font-bold text-[var(--primary)]">${p.num}</span>
+              <span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)]">${p.status}</span>
+            </div>
+            <div class="text-sm font-bold leading-snug">${p.title}</div>
+            <div class="text-xs text-[var(--muted-foreground)]">${p.duration}</div>
+          </button>
+        `;
+      }).join('');
+
+      const p = phases[activePhase];
+      document.getElementById('phase-detail').innerHTML = `
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 pb-2 border-b border-[var(--border)]">
+          <div>
+            <span class="text-xs font-mono text-[var(--primary)] font-bold">${p.num} — ${p.status}</span>
+            <h3 class="text-base font-bold">${p.title}</h3>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg border border-[var(--border)] text-xs font-mono">${p.gate}</span>
+        </div>
+        <ul class="space-y-2 text-xs md:text-sm">
+          ${p.items.map(it => `<li class="flex items-start gap-2"><span class="text-[var(--primary)] font-bold">▸</span><span>${it}</span></li>`).join('')}
+        </ul>
+      `;
+    }
+
+    function renderOptions() {
+      const opts = i18n[lang].options;
+      document.getElementById('options-grid').innerHTML = opts.map(o => {
+        const border = o.rec ? 'border-[var(--primary)] ring-1 ring-[var(--primary)]' : 'border-[var(--border)]';
+        const badgeCls = o.rec ? 'bg-[var(--primary)] text-[var(--primary-foreground)]' : 'border border-[var(--border)] text-[var(--muted-foreground)]';
+        return `
+          <div class="bg-[var(--card)] border ${border} rounded-xl p-4 space-y-2.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-xs font-mono font-bold">${o.code}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold ${badgeCls}">${o.badge}</span>
+            </div>
+            <h3 class="text-sm md:text-base font-bold">${o.name}</h3>
+            <div class="grid grid-cols-2 gap-2 pt-1 text-xs font-mono">
+              <div class="p-2 rounded border border-[var(--border)]"><div class="text-[var(--muted-foreground)]">ROM CAPEX</div><div class="font-bold mt-0.5">${o.capex}</div></div>
+              <div class="p-2 rounded border border-[var(--border)]"><div class="text-[var(--muted-foreground)]">VI Outage</div><div class="font-bold mt-0.5">${o.outage}</div></div>
+            </div>
+            <p class="text-xs"><strong class="text-[var(--success)]">+</strong> ${o.pros}</p>
+            <p class="text-xs text-[var(--muted-foreground)]"><strong class="text-[var(--warning)]">−</strong> ${o.cons}</p>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderFmea() {
+      const filtered = risks.filter(r => {
+        if (activeRiskFilter === 'ALL') return true;
+        if (activeRiskFilter === 'MEDIUM') return r.tier === 'MEDIUM' || r.tier === 'LOW';
+        return r.tier === activeRiskFilter;
+      });
+      document.getElementById('fmea-tbody').innerHTML = filtered.map(r => {
+        const tierColor = r.tier === 'CRITICAL' ? 'text-[var(--error)] font-bold' : r.tier === 'HIGH' ? 'text-[var(--warning)] font-semibold' : 'text-[var(--muted-foreground)]';
+        return `
+          <tr>
+            <td class="p-3 font-mono font-bold">${r.id}</td>
+            <td class="p-3 font-semibold">${r.tag}</td>
+            <td class="p-3 text-[var(--muted-foreground)]">${r.find}</td>
+            <td class="p-3 text-center font-mono">${r.sld}</td>
+            <td class="p-3 text-center font-mono ${tierColor}">${r.rpn} (${r.tier})</td>
+            <td class="p-3">${r.mit}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderStakeholders() {
+      const sh = i18n[lang].stakeholders;
+      document.getElementById('stakeholder-grid').innerHTML = sh.map((s, sIdx) => `
+        <div class="bg-[var(--card)] border border-[var(--border)] rounded-xl p-4 space-y-3">
+          <div>
+            <div class="text-xs font-mono text-[var(--muted-foreground)]">${s.doc}</div>
+            <h3 class="text-sm font-bold mt-0.5">${s.role}</h3>
+            <p class="text-xs text-[var(--muted-foreground)] mt-0.5">${s.focus}</p>
+          </div>
+          <div class="space-y-2 pt-2 border-t border-[var(--border)]">
+            ${s.checks.map((c, cIdx) => `
+              <label class="flex items-start gap-2 text-xs cursor-pointer">
+                <input type="checkbox" id="chk-${sIdx}-${cIdx}" class="mt-0.5 accent-[var(--primary)]" />
+                <span>${c}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderNest() {
+      const info = nestData[activeNest];
+      const maxVal = 1450;
+      document.getElementById('nest-bars').innerHTML = `
+        <div class="text-xs font-mono text-[var(--muted-foreground)] pb-1">${info.db} — ${info.rows.length} Active Syringe Rows</div>
+        ${info.rows.map((val, idx) => {
+          const pct = Math.max(4, Math.round((val / maxVal) * 100));
+          return `
+            <div class="flex items-center gap-2 text-xs font-mono">
+              <span class="w-14 text-[var(--muted-foreground)]">Row ${String(idx + 1).padStart(2, '0')}</span>
+              <div class="flex-1 h-2.5 rounded bg-[var(--secondary)] overflow-hidden">
+                <div class="h-full bg-[var(--primary)]" style="width:${pct}%"></div>
+              </div>
+              <span class="w-12 text-right">${val}</span>
+            </div>
+          `;
+        }).join('')}
+      `;
+    }
+
+    function setLang(l) {
+      lang = l;
+      document.getElementById('btn-en').className = l === 'en'
+        ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] transition'
+        : 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] transition';
+      document.getElementById('btn-de').className = l === 'de'
+        ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] transition'
+        : 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] transition';
+      renderAll();
+    }
+
+    function setTab(name) {
+      ['roadmap', 'options', 'fmea', 'kickoff', 'baseline'].forEach(t => {
+        document.getElementById('view-' + t).classList.toggle('hidden', t !== name);
+        document.getElementById('tab-' + t).className = t === name
+          ? 'tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)]'
+          : 'tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)]';
+      });
+    }
+
+    function selectPhase(idx) {
+      activePhase = idx;
+      renderRoadmap();
+    }
+
+    function filterRisk(tier) {
+      activeRiskFilter = tier;
+      ['ALL', 'CRITICAL', 'HIGH', 'MEDIUM'].forEach(k => {
+        document.getElementById('rf-' + k).className = k === tier
+          ? 'px-2.5 py-1 rounded text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)]'
+          : 'px-2.5 py-1 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]';
+      });
+      renderFmea();
+    }
+
+    function setNest(n) {
+      activeNest = n;
+      [64, 100, 160].forEach(k => {
+        document.getElementById('nb-' + k).className = k === n
+          ? 'px-2.5 py-1 rounded text-xs font-mono bg-[var(--primary)] text-[var(--primary-foreground)]'
+          : 'px-2.5 py-1 rounded text-xs font-mono bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]';
+      });
+      renderNest();
+    }
+
+    renderAll();
+  </script>
+</body>
+</html>
