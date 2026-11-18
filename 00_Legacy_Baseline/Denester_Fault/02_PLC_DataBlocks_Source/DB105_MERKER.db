@@ -1,0 +1,70 @@
+DATA_BLOCK "MERKER" // DB105 — EN: Merker flag data / DE: Merker-Daten
+VERSION : 0.1
+STRUCT 	
+   INIT_1CK : BOOL ;	//M200.0 Memoria inizializzazione blocco
+   MFLASH : BOOL ;	//M200.1 Memoria per lampeggiatori
+   MFLASH2 : BOOL ;	//M200.2 Memoria per lampeggiatori
+   MSERR : BOOL ;	//M200.3 Memoria errore comunicazione PLC-OP
+   HOURSCOUNTER : BOOL ;	//M200.4 Memoria comando conta-ore
+   PRG_ENABLE : BOOL ;	//M200.5 Memoria abilitazione alla programmazione
+   LINK_OK : BOOL ;	//M200.6 Memoria comunicazione stabilita
+   FORCEOUT_ENABLE : BOOL ;	//M200.7 memoria forzature uscite in corso
+   ACK_RQST : BOOL ;	//M201.0 Memoria richiesta riconoscimento allarmi
+   M201_1 : BOOL ;	
+   M201_2 : BOOL ;	
+   M201_3 : BOOL ;	
+   M201_4 : BOOL ;	
+   APP_SINGOLO : BOOL ;	//M201.5 Memoria appoggio suno singolo (personalizzazione corima)
+   APP_CONTINUO : BOOL ;	//M201.6 Memoria appoggio suno continuo (personalizzazione corima)
+   APP_IMPULSO_RESET : BOOL ;	//M201.7 memoria appoggio (personalizzazione corima)
+   JOB_ON : BOOL ;	//M202.0 Memoria ordine OP in corso
+   WARNIN_ON : BOOL ;	//M202.1 Memoria avviso temporizzato in corso
+   SET_DATAORA : BOOL ;	//M202.2 Memoria richiesta impostazione nuova data/ora
+   FR_SET_DATAORA : BOOL ;	//M202.3 Fronte richiesta impostazione nuova data/ora
+   SET_ORAOP : BOOL ;	//M202.4 Memoria impostazione ora di sistema dell'OP
+   SET_DATAOP : BOOL ;	//M202.5 Memoria impostazione data di sistema dell'OP
+   MANRST_HIDDEN_EN : BOOL ;	//M202.6 Memoria abilitazione azzeramento contatempo manutenzione
+   SD_STORE : BOOL ;	//M202.7 Memoria memorizzazione set di dati
+   VFVAR_EN1 : BOOL ;	//M203.0 Memoria abilitazione funzione di forzatura variabili
+   VFVAR_EN2 : BOOL ;	//M203.1 Memoria abilitazione funzione di forzatura variabili
+   VFVAR_RQST : BOOL ;	//M203.2 Memoria richiesta controllo variabili
+   VFORCEOUT_RQST : BOOL ;	//M203.3 Memoria richiesta forzatura uscite
+   M203_4 : BOOL ;	
+   M203_5 : BOOL ;	
+   M203_6 : BOOL ;	
+   M203_7 : BOOL ;	
+   SET_DI_DATI_RDY : BOOL ;	//M204.0 Memoria elaborazione set di dati
+   SET_DI_DATI_OK : BOOL ;	//M204.1 Memoria esito positivo elaborazione set di dati
+   SET_DI_DATI_KO : BOOL ;	//M204.2 Memoria esito negativo elaborazione set di dati
+   SET_DI_DATI_SAVE : BOOL ;	//M204.3 Memoria funzione salva il set di dati
+   SET_DI_DATI_SETUP : BOOL ;	//M204.4 Memoria funzione imposta il set di dati come operativo
+   SD_REQ_MODIFY : BOOL ;	//M204.5 Memoria richiesta modifica set di dati
+   SD_REQ_SETUP : BOOL ;	//M204.6 Memoria richiesta impostazione set di dati come operativo
+   SD_REQUEST : BOOL ;	//M204.7 Memoria richiesta elaborazione set di dati
+   PSW_ON : BOOL ;	//M205.0 Memoria password attiva
+   PSW_RQST : BOOL ;	//M205.1 Memoria servizio logout password
+   PSW_OFF : BOOL ;	//M205.2 Memoria servizio logout password
+   PSW_ENABLE : BOOL ;	//M205.3 Memoria abilitazione password 0=Abilitata / 1=Disabilitata
+   ACK_OK : BOOL ;	//M205.4 Memoria riconoscimento allarme avvenuto
+   M205_5 : BOOL ;	
+   M205_6 : BOOL ;	
+   TESTMES_ON : BOOL ;	//M205.7 Memoria test messaggi in corso
+   AVVISI : WORD ;	//MW206 Registro visualizzazione avvisi temporizzati
+   AVVISI_RICETTA : WORD ;	//MW208 Registro visualizzazione avvisi della ricetta
+   VFVAR_POINTER : DWORD ;	//MD210 Puntatore servizio controllo variabili
+   TESTMESS_POINTER : WORD ;	//MW214 Puntatore servizio test messaggi
+   ACK_POINTER : WORD ;	//MW216 Puntatore ricerca e comando riconoscimento allarmi
+   AVVISI_RAPIDO : WORD ;	//MW218 Registro visualizzazione avvisi menù rapido
+   MW220 : WORD ;	
+   MW222 : WORD ;	
+   MW224 : WORD ;	
+   MW226 : WORD ;	
+   MW228 : WORD ;	
+   MW230 : WORD ;	
+   MW232 : WORD ;	
+   MW234 : WORD ;	
+   MW236 : WORD ;	
+   MW238 : WORD ;	
+  END_STRUCT ;
+BEGIN
+END_DATA_BLOCK

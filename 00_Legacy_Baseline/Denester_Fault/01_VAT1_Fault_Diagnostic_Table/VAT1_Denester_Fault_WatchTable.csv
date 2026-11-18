@@ -1,0 +1,89 @@
+row,symbol,iec_address,data_type,description_en,description_de
+1,step1,MW 182,WORD,Sequence 1 step word,Schrittwort Sequenz 1
+2,step2,MW 184,WORD,Sequence 2 step word,Schrittwort Sequenz 2
+3,step3,MW 186,WORD,Sequence 3 step word,Schrittwort Sequenz 3
+4,w_stato,MW 200,WORD,Machine status word,Maschinen-Statuswort
+5,StatoRun,M 200.0,BOOL,Machine RUN state,Maschine in BETRIEB
+6,StatoAuto,M 200.1,BOOL,Selector switch AUTOMATIC,Wahlschalter AUTOMATIK
+7,StatoManuale,M 200.2,BOOL,Selector switch MANUAL,Wahlschalter HAND
+8,StatoStop,M 200.4,BOOL,Machine STOP state,Maschine in STOPP
+9,EnbTrasfe>Solle,M 0.1,BOOL,Permissive Transfer -> Lifter,Freigabe Umsetzer -> Heber
+10,EnbSolle>Trasfe,M 0.2,BOOL,Permissive Lifter -> Transfer,Freigabe Heber -> Umsetzer
+11,EnbGuida>Trasfe,M 0.3,BOOL,Permissive Guide -> Transfer,Freigabe Fuehrung -> Umsetzer
+12,EnbTrasfe>Guida,M 0.0,BOOL,E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub),E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub)
+13,EnbTrasfe>SvuotaGuida,M 0.4,BOOL,Permissive Transfer -> Guide (Fwd),Freigabe Umsetzer -> Fuehrung (Vor)
+14,SQ324,I 0.3,BOOL,Lifter cylinder UP sensor,Heber OBEN Sensor
+15,SQ325,I 0.4,BOOL,Lifter cylinder DOWN sensor,Heber UNTEN Sensor
+16,CmdSolle,M 7.2,BOOL,Lifter cylinder command,Befehl Heber
+17,YV313,Q 125.2,BOOL,Lifter cylinder RETRACT,Heber zurueck / UNTEN
+18,YV314,Q 125.3,BOOL,Lifter cylinder EXTEND,Heber vor / OBEN
+19,TimOut1,T 10,TIMER,Lifter movement timeout,Timeout Spritzenheber
+20,TimOut2,T 11,TIMER,Lifter movement timeout,Timeout Spritzenheber
+21,SQ327,I 0.6,BOOL,Positioner cylinder RETRACT,Positionierer zurueck
+22,SQ328,I 0.7,BOOL,Positioner cylinder ADVANCE,Positionierer vor
+23,CmdPosiz,M 7.1,BOOL,Positioner cylinder command,Befehl Positionierer
+24,YV315,Q 125.4,BOOL,Positioner cylinder RETRACT,Positionierer zurueck
+25,YV316,Q 125.5,BOOL,Positioner cylinder ADVANCE,Positionierer vor
+26,TimOut3,T 12,TIMER,Positioner movement timeout,Timeout Positionierer
+27,TimOut4,T 13,TIMER,Positioner movement timeout,Timeout Positionierer
+28,CmdPinza,M 7.3,BOOL,Gripper clamp command,Befehl Greifer
+29,YV317,Q 125.6,BOOL,Gripper cylinder OPEN,Greifer OEFFNEN
+30,YV318,Q 125.7,BOOL,Gripper cylinder CLOSE,Greifer SCHLIESSEN
+31,TimApre,T 4,TIMER,Gripper open timer,Timer Greifer oeffnen
+32,TimChiude,T 5,TIMER,Gripper close timer,Timer Greifer schliessen
+33,SQ331,I 1.0,BOOL,X-Axis at Pick / Nest pos,X-Achse Nestposition
+34,SQ332,I 1.1,BOOL,X-Axis at Pre-Pick pos,X-Achse Vor-Aufnahme
+35,SQ333,I 1.2,BOOL,X-Axis at Pre-Discharge pos,X-Achse Vor-Abgabe
+36,SQ334,I 1.3,BOOL,X-Axis at Discharge pos,X-Achse Abgabepos.
+37,CmdAsseX,M 7.4,BOOL,X-Axis movement command,Befehl X-Achse
+38,YV311,Q 125.0,BOOL,Vertical axis brake valve,Bremse Vertikalachse
+39,SQ335,I 1.4,BOOL,Y-Axis LOW position,Y-Achse UNTEN
+40,SQ336,I 1.5,BOOL,Y-Axis Pre-Low position,Y-Achse Vor-Unten
+41,SQ337,I 1.6,BOOL,Y-Axis Pre-High position,Y-Achse Vor-Oben
+42,SQ338,I 1.7,BOOL,Y-Axis HIGH position,Y-Achse OBEN
+43,CmdAsseY,M 7.5,BOOL,Y-Axis movement command,Befehl Y-Achse
+44,SQ341,I 4.0,BOOL,Guide cylinder UP,Fuehrungszylinder oben
+45,SQ342,I 4.1,BOOL,Guide cylinder DOWN,Fuehrungszylinder unten
+46,SQ343,I 4.2,BOOL,Guide pusher ADVANCED,Fuehrung/Schieber vorne
+47,SQ344,I 4.3,BOOL,Guide pusher RETRACTED,Fuehrung/Schieber hinten
+48,CmdEstSirAl,M 7.6,BOOL,Guide cylinder up cmd,Befehl Fuehrung auf
+49,CmdEstSirAv,M 7.7,BOOL,Guide pusher forward cmd,Befehl Schieber vor
+50,YV361,Q 4.0,BOOL,Guide cylinder UP valve,Fuehrung auf Ventil
+51,YV362,Q 4.1,BOOL,Guide cylinder DOWN valve,Fuehrung ab Ventil
+52,YV363,Q 4.2,BOOL,Guide pusher ADVANCE valve,Schieber vor Ventil
+53,YV364,Q 4.3,BOOL,Guide pusher RETRACT valve,Schieber zurueck Ventil
+54,TimOut5,T 18,TIMER,Guide cylinder lift timeout,Timeout Fuehrungszyl. auf
+55,TimOut6,T 21,TIMER,Guide pusher advance timeout,Timeout Schieber vor
+56,J291,I 125.0,BOOL,Downstream machine ready,Nachfolgemoschine bereit
+57,SP292,I 125.1,BOOL,Air pressure switch OK,Druckluftwaechter OK
+58,B293,I 125.2,BOOL,Outfeed max level,Auslaufstau maximal
+59,B323,I 0.2,BOOL,Nest present sensor,Nest vorhanden Sensor
+60,B326,I 0.5,BOOL,Nest outfeed full,Nest-Auslauf voll
+61,UE142_OK,I 125.6,BOOL,Safety relay OK,Sicherheitsrelais OK
+62,PilzOk,M 235.6,BOOL,Safety circuits OK (Pilz),Sicherheitskreis OK
+63,SQ160,I 125.7,BOOL,Guard doors closed,Schutztueren zu
+64,SB150,I 126.5,BOOL,Emergency stop healthy (NC),Not-Halt bereit (Ruhestrom)
+65,SB271,I 126.0,BOOL,Start pushbutton,Start-Taster
+66,SB272,I 126.1,BOOL,Stop pushbutton,Stopp-Taster
+67,SB273,I 126.2,BOOL,Reset pushbutton,Reset/Quittier-Taster
+68,alr1,M 218.0,BOOL,SAFETY RELAY FAULT,SICHERHEITSRELAIS AUSGELOEST
+69,alr2,M 218.1,BOOL,EMERGENCY STOP PRESSED,NOT-HALT BETAETIGT
+70,alr5,M 218.4,BOOL,LOW AIR PRESSURE,DRUCKLUFT ZU NIEDRIG
+71,alr7,M 218.6,BOOL,GUARD DOORS OPEN,SCHUTZTUEREN OFFEN
+72,alr13,M 219.4,BOOL,EXTRACTION GUIDE NOT UP,FUEHRUNG NICHT OBEN
+73,alr14,M 219.5,BOOL,EXTRACTION GUIDE NOT DOWN,FUEHRUNG NICHT UNTEN
+74,alr15,M 219.6,BOOL,EXTRACTION GUIDE NOT FWD,SCHIEBER NICHT VORN
+75,alr16,M 219.7,BOOL,EXTRACTION GUIDE NOT BACK,SCHIEBER NICHT HINTEN
+76,alr17,M 220.0,BOOL,LIFTER NOT UP,HEBER NICHT OBEN
+77,alr18,M 220.1,BOOL,LIFTER NOT DOWN,HEBER NICHT UNTEN
+78,alr19,M 220.2,BOOL,POSITIONER NOT ADVANCED,POSITIONIERER NICHT VORN
+79,alr20,M 220.3,BOOL,POSITIONER NOT RETRACTED,POSITIONIERER NICHT ZURUECK
+80,alr21,M 220.4,BOOL,X-AXIS NOT ADVANCED,X-ACHSE NICHT AUSGEFAHREN
+81,alr22,M 220.5,BOOL,X-AXIS NOT RETRACTED,X-ACHSE NICHT EINGEFAHREN
+82,alr23,M 220.6,BOOL,Y-AXIS NOT DOWN,Y-ACHSE NICHT UNTEN
+83,alr24,M 220.7,BOOL,Y-AXIS NOT UP,Y-ACHSE NICHT OBEN
+84,alr25,M 221.0,BOOL,DISCHARGE NOT COMPLETED,ABGABE NICHT AUSGEFUEHRT
+85,MasterRes,M 19.0,BOOL,Master reset running flag,Master-Reset aktiv Merker
+86,Reset,M 238.2,BOOL,Reset pulse,Reset-Impuls
+87,^Start,M 238.0,BOOL,Sequence / Diagnostic variable,Schrittketten- / Diagnosevariable
+88,^Stop,M 238.1,BOOL,Sequence / Diagnostic variable,Schrittketten- / Diagnosevariable

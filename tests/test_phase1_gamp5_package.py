@@ -124,3 +124,23 @@ def test_all_4_gamp5_phases_and_bilingual_deliverables_exist() -> None:
     ]:
         txt = (REPO_ROOT / bilingual_doc).read_text(encoding="utf-8")
         assert "Deutsch" in txt and "GAMP 5" in txt
+
+
+def test_unpacked_denester_fault_folders() -> None:
+    """Verify C6060007S_12.zip is unpacked into 6 clean, human-readable folders under Denester_Fault."""
+    from tools.unpack_denester_fault import unpack_and_organize
+
+    stats = unpack_and_organize()
+    assert stats["vat1_rows"] >= 80
+    assert stats["db_files"] == 9
+    assert stats["logic_block_docs"] == 22
+    assert stats["protool_tags"] >= 100
+
+    fault_root = REPO_ROOT / "00_Legacy_Baseline" / "Denester_Fault"
+    assert (fault_root / "01_VAT1_Fault_Diagnostic_Table" / "VAT1_Denester_Fault_WatchTable.csv").exists()
+    assert (fault_root / "02_PLC_DataBlocks_Source" / "DB106_HMI.db").exists()
+    assert (fault_root / "03_PLC_Logic_Blocks_Docs" / "FC106_SEQ1_SOL_SIRINGHE.md").exists()
+    assert (fault_root / "04_ProTool_HMI_TP170B" / "protool_hmi_tags.csv").exists()
+    assert (fault_root / "05_STEP7_Clean_Project" / "C6060007S_12" / "C6060007.s7p").exists()
+    assert (fault_root / "06_Original_2016_Backup" / "sept2026_denester_fault_diff.csv").exists()
+
