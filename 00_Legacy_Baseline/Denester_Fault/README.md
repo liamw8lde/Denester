@@ -1,35 +1,20 @@
-# Legacy Fault Investigation Archive (`E:\Denester_Fault`)
+# Unpacked & Reorganized `Denester_Fault` Project (`C6060007S_12`)
 
-## 1. Already Extracted from `C6060007S_12.zip` (`2026-09` Fault Audit)
+The legacy `C6060007S_12.zip` (`MP1P-Ferring` Denester Fault archive) has been completely unpacked, decoded, and reorganized into clean, browsable folders below (while keeping the byte-identical master archive in [`../PLC_HMI_Archive/C6060007S_12.zip`](../PLC_HMI_Archive/C6060007S_12.zip) for GAMP 5 audit traceability):
 
-Byte-level inspection of [`C6060007S_12.zip`](../PLC_HMI_Archive/C6060007S_12.zip) confirmed that the September 2026 `Denester_Fault` work preserved the original `2016-03-17` validated OEM backup inside `ombstx/offline_ORIGINAL_BACKUP/` and `YDBs_ORIGINAL_BACKUP/` while updating `ombstx/offline/` and `YDBs/25319/SYMLIST.DBF`:
-
-| Verification Check | Result | GAMP 5 Validation Impact |
-| :--- | :--- | :--- |
-| **Executable MC7 Block Checksums (`OB`, `FB`, `FC`, `DB`)** | **`0` bytes modified** across all `31` blocks (`2016-03-17` vs. `2026-09-16`) | Confirms [`C6060007S_12.zip`](../PLC_HMI_Archive/C6060007S_12.zip) holds the exact validated `MP1P-Ferring` machine logic. |
-| **Symbol Table Audit (`SYMLIST.DBF`)** | **`362` symbols** translated from Italian (`IT`) into bilingual **`EN / DE`** | Saved in [`sept2026_denester_fault_diff.csv`](./sept2026_denester_fault_diff.csv) and ready for direct TIA Portal tag import in Phase 2. |
-| **Know-How Protection (`PASSWORD`)** | **`0` protected blocks** | Full source transparency for Phase 2 `S7-1500` migration without OEM black-box lock-in. |
+| Folder | Contents |
+| :--- | :--- |
+| [`01_VAT1_Fault_Diagnostic_Table/`](./01_VAT1_Fault_Diagnostic_Table/) | All **`88` diagnostic variables** from the Sept 2026 `VAT_1` fault-finding watch table (`VAT1_Denester_Fault_WatchTable.csv` + ready-to-import `VAT1_TIA_Portal_WatchTable.tsv` for `S7-1500`). |
+| [`02_PLC_DataBlocks_Source/`](./02_PLC_DataBlocks_Source/) | Human-readable `.db` STEP 7 `STRUCT` source files for all **`9` Data Blocks** (`DB10`–`DB12`, `DB20`–`DB21`, `DB90`, `DB100`, `DB105`, `DB106`). |
+| [`03_PLC_Logic_Blocks_Docs/`](./03_PLC_Logic_Blocks_Docs/) | Human-readable `.md` documentation for all **`22` logic & system blocks** (`OB1`, `OB100`, `FB11`, `FB50`, `FC10`–`FC109`, `SFB47`, `SFC0`, `SFC1`) including `CO.RI.M.A. SRL` revision headers, `VAR_INPUT/OUTPUT` interfaces, and network step titles. |
+| [`04_ProTool_HMI_TP170B/`](./04_ProTool_HMI_TP170B/) | Separated `TDOP_Project/` (`PRO.PDB`, `S7TDOP.DBF`) + [`protool_screens.csv`](./04_ProTool_HMI_TP170B/protool_screens.csv) (`37` screens) + [`protool_hmi_tags.csv`](./04_ProTool_HMI_TP170B/protool_hmi_tags.csv). |
+| [`05_STEP7_Clean_Project/`](./05_STEP7_Clean_Project/C6060007S_12/) | Clean unpacked active STEP 7 v5.7 project (`C6060007.s7p`) with duplicate backup folders removed for clean SIMATIC Manager opening. |
+| [`06_Original_2016_Backup/`](./06_Original_2016_Backup/) | Isolated `2016-03-17` `offline_ORIGINAL_BACKUP/` & `YDBs_ORIGINAL_BACKUP/` + [`sept2026_denester_fault_diff.csv`](./06_Original_2016_Backup/sept2026_denester_fault_diff.csv) proving `0` MC7 logic bytes changed. |
 
 ---
 
-## 2. Importing Remaining Local Files from `E:\Denester_Fault`
+## Optional: Adding Extra Local Files from `E:\Denester_Fault` (If Any Exist Outside `C6060007S_12.zip`)
 
-Because the cloud agent runs on an isolated Linux VM and cannot directly mount your local Windows `E:\` drive, choose **either Option A or Option B** on your Windows PC to bring any remaining files from `E:\Denester_Fault` (electrical schematics PDFs, fault logs, photos, `ProSave` backups, or notes) into this folder:
-
-### Option A — Drag & Drop into Antigravity Chat (Fastest)
-1. Right-click `E:\Denester_Fault` in Windows Explorer → **Compress to ZIP file** (or run `.\tools\upload_denester_fault.ps1 -Mode Zip` in PowerShell).
-2. Drag and drop `Denester_Fault_Upload.zip` into the chat message box and send `"Organize uploaded Denester_Fault zip"`.
-3. The agent will unpack, classify, commit, and cross-reference every file into the Phase 1/2 engineering deliverables automatically.
-
-### Option B — Direct 1-Click GitHub Push from PowerShell
-Run [`tools/upload_denester_fault.ps1`](../../tools/upload_denester_fault.ps1) on your Windows PC:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\upload_denester_fault.ps1 -SourcePath "E:\Denester_Fault" -Mode GitPush
-```
-
-This automatically sorts every file from `E:\Denester_Fault` into clean GAMP 5 baseline subfolders:
-- `Schematics_and_Manuals/` (`.pdf`, `.dwg`, `.dxf`, `.eplan`)
-- `PLC_and_HMI_Exports/` (`.s7p`, `.awl`, `.scl`, `.pdb`, `.psb`, `.zip`)
-- `Fault_Logs_and_Notes/` (`.txt`, `.md`, `.docx`, `.xlsx`, `.csv`, `.log`)
-- `Photos_and_Videos/` (`.jpg`, `.png`, `.mp4`)
+Why couldn't the cloud chat read `E:\Denester_Fault` directly? Because this web/cloud chat runs on a remote Google server on the internet (not installed on your Windows PC), so it has no physical connection to your PC's `E:\` drive.
+- If `C6060007S_12.zip` was the whole project: **everything is already unpacked and pushed to GitHub above!**
+- If you also have extra PDFs, photos, or notes sitting only on your local `E:\` drive, either drag-and-drop them into this chat window OR open the repository in the **Antigravity Desktop** app on your Windows PC.

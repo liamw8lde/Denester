@@ -1,0 +1,157 @@
+DATA_BLOCK "HMI" // DB106 — EN: HMI interface data / DE: HMI Schnittstellendaten
+VERSION : 0.1
+STRUCT 	
+   COORDINAZIONE : STRUCT 	
+    DBB0 : BYTE ;	
+    Avviamento_OP : BOOL ;	//Bit di avviamento dell'OP
+    Funzionamento_OP : BOOL ;	//Tipo di funzionamento dell'OP
+    Watchdog : BOOL ;	//Bit di attivita' dell'OP
+    DBX1_3 : BOOL ;	
+    DBX1_4 : BOOL ;	
+    DBX1_5 : BOOL ;	
+    DBX1_6 : BOOL ;	
+    DBX1_7 : BOOL ;	
+    DBB2 : BYTE ;	
+    DBB3 : BYTE ;	
+   END_STRUCT ;	
+   BUFFER_ORDINI : STRUCT 	//Buffer degli ordini
+    Numero_Ordine : INT ;	//Numero dell'ordine
+    Parametro1 : INT ;	//Parametro 1 
+    Parametro2 : INT ;	//Parametro 2 
+    Parametro3 : INT ;	//Parametro 3 
+   END_STRUCT ;	
+   SET_NEW_OROLOGIO : DATE_AND_TIME ;	//Impostazione nuova data e ora
+   SET_OROLOGIO_OP : DATE_AND_TIME ;	//Impostazione data e ora di sistema dell'OP
+   PAGE_OLD : WORD ;	//Registro pagina precedente
+   DBW30 : WORD ;	
+   TIMER_AVVISI : S5TIME  := S5T#3S;	//Durata visualizzazione avvisi temporizzati
+   PAGINA : STRUCT 	//Pagina OP
+    Tipo_Pagina : WORD ;	//Attuale tipo di pagina
+    Numero_Pagina : WORD ;	//Attuale numero della pagina
+    DBW38 : WORD ;	//Riservato
+    DBW40 : WORD ;	//Riservato
+    DBW42 : WORD ;	//Riservato
+   END_STRUCT ;	
+   SEGNALAZIONI : ARRAY  [0 .. 7 ] OF //Segnalazioni di servizio
+   WORD ;	
+   BUFFER_RICETTA : STRUCT 	//Buffer dei dati della ricetta
+    Ricetta : BYTE ;	//Nr. della ricetta
+    SetDiDati : BYTE ;	//Nr. del set di dati
+    NomeSetDiDati : STRING  [10 ];	//Nome del set di dati
+    D00 : INT ;	//Parametro[0] - 
+    D01 : INT ;	//Parametro[1] - 
+    D02 : INT ;	//Parametro[2] - 
+    D03_Selettori : STRUCT 	//Parametro[3] - selettori formato
+     S80_0 : BOOL ;	
+     S80_1 : BOOL ;	
+     S80_2 : BOOL ;	
+     Formato160 : BOOL ;	//formato 0=100 1=160
+     S80_4 : BOOL ;	
+     S80_5 : BOOL ;	
+     S80_6 : BOOL ;	
+     S80_7 : BOOL ;	
+     S81_0 : BOOL ;	
+     S81_1 : BOOL ;	
+     S81_2 : BOOL ;	
+     S81_3 : BOOL ;	
+     S81_4 : BOOL ;	
+     S81_5 : BOOL ;	
+     S81_6 : BOOL ;	
+     S81_7 : BOOL ;	
+    END_STRUCT ;	
+    D04 : INT ;	//Parametro[4] - 
+    D05 : INT ;	//Parametro[5] - 
+    D06 : INT ;	//Parametro[6] - 
+    D07 : INT ;	//Parametro[7] - 
+    D08 : S5TIME ;	//Parametro[8] - 
+    D09 : S5TIME ;	//Paramento[9] - 
+    D10 : WORD ;	//Parametro[10] - 
+    D11 : DINT ;	//Parametro[11] - 
+    User : ARRAY  [13 .. 79 ] OF //liberi
+    WORD ;	
+   END_STRUCT ;	
+   DBW234 : WORD ;	
+   DBW236 : WORD ;	
+   DBW238 : WORD ;	
+   MASCHERA_ALLARMI : ARRAY  [0 .. 127 ] OF //Area test messaggi
+   BOOL ;	
+   VAR_OP : STRUCT 	//Buffer delle varibili da visualizzare
+    SecondiTotali : BYTE ;	//Contaore: Secondi totali
+    MinutiTotali : BYTE ;	//Contaore: Minuti totali
+    OreTotali : DINT ;	//Contaore: Ore totali
+    SecondiParziali : BYTE ;	//Contaore: Secondi parziali
+    MinutiParziali : BYTE ;	//Contaore: Minuti parziali
+    OreParziali : DINT ;	//Contaore: Ore parziali
+    SecondiManutenzione : BYTE ;	//Secondi manutenzione
+    MinutiManutenzione : BYTE ;	//Minuti manutenzione
+    OreManutenzione : INT  := 300;	//Ore manutenzione
+    Manutenzione : BOOL ;	//Ore manutenzione trascorse
+    DBX16_1 : BOOL ;	//Riserva
+    DBX16_2 : BOOL ;	//Riserva
+    DBX16_3 : BOOL ;	//Riserva
+    DBX16_4 : BOOL ;	//Riserva
+    DBX16_5 : BOOL ;	//Riserva
+    DBX16_6 : BOOL ;	//Riserva
+    DBX16_7 : BOOL ;	//Riserva
+    Lingua : BYTE ;	//Lingua display
+    Rpm : INT ;	//R.p.m. macchina
+    GradiMacchina : INT ;	//Posizione angolare macchina
+    ContapezziBuoniUsciti : DINT ;	//Contapezzi buoni usciti
+    ContapezziScartiUsciti : DINT ;	//contapezzi scarti usciti
+    ContapezziEntrati : DINT ;	//contapezzi entrati
+    AppRpm : INT ;	//appoggio calcolo velocita
+    Riserva1 : ARRAY  [0 .. 45 ] OF //Variabili di riserva
+    WORD ;	
+    SOFTWARE : STRUCT 	//Versione software
+     ProgrammaPLC : STRING  [12 ];	//Numero/Nome programma PLC
+     VersionePLC : WORD ;	//Versione programma PLC
+     DataPLC : DWORD ;	//Data programma PLC
+     ProgrammaOP : STRING  [12 ];	//Numero/Nome programma Display
+     VersioneOP : WORD ;	//Versione programma Display
+     DataOP : DWORD ;	//Data programma Display
+    END_STRUCT ;	
+    FormatoOperativo : STRING  [10 ] := 'STANDARD';	//Nome del formato operativo
+    LavaggioOperativo : STRING  [10 ] := 'STANDARD';	//Nome del lavaggio operativo
+    Riserva2 : ARRAY  [0 .. 15 ] OF //Variabili di riserva
+    WORD ;	
+   END_STRUCT ;	
+   ALLARMI : ARRAY  [0 .. 7 ] OF //Segnalazioni di allarme
+   WORD ;	
+   ACK_ALLARMI : ARRAY  [0 .. 7 ] OF //Buffer di acquisizione segnalazioni di allarme
+   WORD ;	
+   CONTROLLO_VARIABILI : STRUCT 	//Buffer controllo variabili
+    AreaR1 : WORD ;	
+    IndirizzoR1 : WORD ;	
+    ValoreR1 : WORD ;	
+    AreaR2 : WORD ;	
+    IndirizzoR2 : WORD ;	
+    ValoreR2 : WORD ;	
+    AreaR3 : WORD ;	
+    IndirizzoR3 : WORD ;	
+    ValoreR3 : WORD ;	
+    AreaR4 : WORD ;	
+    IndirizzoR4 : WORD ;	
+    ValoreR4 : WORD ;	
+    AreaR5 : WORD ;	
+    IndirizzoR5 : WORD ;	
+    ValoreR5 : WORD ;	
+    Force : STRUCT 	
+     R1 : BOOL ;	
+     R2 : BOOL ;	
+     R3 : BOOL ;	
+     R4 : BOOL ;	
+     R5 : BOOL ;	
+    END_STRUCT ;	
+   END_STRUCT ;	
+   FORZATURA_USCITE : STRUCT 	//Buffer forzatura uscite
+    ByteDiComando : BYTE ;	
+    Valore : BYTE ;	
+    BufferOutput : WORD ;	
+   END_STRUCT ;	
+   PASSWORD : STRUCT 	//Area servizio gestione password
+    Timer_ON : S5TIME  := S5T#1M;	//Timer durata abilitazione password
+    Level_ON : WORD ;	//Livello di password attivo
+   END_STRUCT ;	
+  END_STRUCT ;
+BEGIN
+END_DATA_BLOCK

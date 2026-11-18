@@ -1,0 +1,229 @@
+
+C6060007S_11 - \\co-se-fs1\UTE\commesse\C6060007.FER_SER_C6105006\PLC\C6060007
+
+File di protocollo: \\co-se-fs1\UTE\commesse\C6060007.FER_SER_C6105006\PLC\C6060007\global\s7lst\langexch.txt
+Data: 10/12/2010  Ora: 08.28.28
+
+Impostazioni: Lingua di arrivo: '16(1) Italiano (Italia)'
+
+Percorso progetto: C6060007S_11\MP1P-Ferring\CPU 313C\Programma S7(1)\Blocchi
+
+Cambia lingua di: OB1
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: OB100
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB10
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB11
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB20
+
+Cambia lingua di: DB21
+
+Cambia lingua di: DB90
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB100
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB105
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: DB106
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC10
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC11
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC40
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC51
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC99
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC100
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC101
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC102
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC103
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: BlockComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC104
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC105
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC106
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: BlockComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC107
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: BlockComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC108
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FC109
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FB11
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Cambia lingua di: FB50
+     Testato: BlockTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: NetworkTitle
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: LineComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+     Testato: InterfaceComment
+AVVISO: Per questo tipo di testo non sono state trovate traduzioni nella lingua di arrivo.
+
+Fine della funzione Cambio lingua: 0 errori, 82 avvisi

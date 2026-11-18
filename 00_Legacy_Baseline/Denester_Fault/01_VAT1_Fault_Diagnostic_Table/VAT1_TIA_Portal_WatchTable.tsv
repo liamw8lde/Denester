@@ -1,0 +1,89 @@
+Name	Address	Display format	Comment
+step1	%MW182	Hex	EN: Sequence 1 step word / DE: Schrittwort Sequenz 1
+step2	%MW184	Hex	EN: Sequence 2 step word / DE: Schrittwort Sequenz 2
+step3	%MW186	Hex	EN: Sequence 3 step word / DE: Schrittwort Sequenz 3
+w_stato	%MW200	Hex	EN: Machine status word / DE: Maschinen-Statuswort
+StatoRun	%M200.0	Bool	EN: Machine RUN state / DE: Maschine in BETRIEB
+StatoAuto	%M200.1	Bool	EN: Selector switch AUTOMATIC / DE: Wahlschalter AUTOMATIK
+StatoManuale	%M200.2	Bool	EN: Selector switch MANUAL / DE: Wahlschalter HAND
+StatoStop	%M200.4	Bool	EN: Machine STOP state / DE: Maschine in STOPP
+EnbTrasfe>Solle	%M0.1	Bool	EN: Permissive Transfer -> Lifter / DE: Freigabe Umsetzer -> Heber
+EnbSolle>Trasfe	%M0.2	Bool	EN: Permissive Lifter -> Transfer / DE: Freigabe Heber -> Umsetzer
+EnbGuida>Trasfe	%M0.3	Bool	EN: Permissive Guide -> Transfer / DE: Freigabe Fuehrung -> Umsetzer
+EnbTrasfe>Guida	%M0.0	Bool	EN: E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub) / DE: E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub)
+EnbTrasfe>SvuotaGuida	%M0.4	Bool	EN: Permissive Transfer -> Guide (Fwd) / DE: Freigabe Umsetzer -> Fuehrung (Vor)
+SQ324	%I0.3	Bool	EN: Lifter cylinder UP sensor / DE: Heber OBEN Sensor
+SQ325	%I0.4	Bool	EN: Lifter cylinder DOWN sensor / DE: Heber UNTEN Sensor
+CmdSolle	%M7.2	Bool	EN: Lifter cylinder command / DE: Befehl Heber
+YV313	%Q125.2	Bool	EN: Lifter cylinder RETRACT / DE: Heber zurueck / UNTEN
+YV314	%Q125.3	Bool	EN: Lifter cylinder EXTEND / DE: Heber vor / OBEN
+TimOut1	%T10	Hex	EN: Lifter movement timeout / DE: Timeout Spritzenheber
+TimOut2	%T11	Hex	EN: Lifter movement timeout / DE: Timeout Spritzenheber
+SQ327	%I0.6	Bool	EN: Positioner cylinder RETRACT / DE: Positionierer zurueck
+SQ328	%I0.7	Bool	EN: Positioner cylinder ADVANCE / DE: Positionierer vor
+CmdPosiz	%M7.1	Bool	EN: Positioner cylinder command / DE: Befehl Positionierer
+YV315	%Q125.4	Bool	EN: Positioner cylinder RETRACT / DE: Positionierer zurueck
+YV316	%Q125.5	Bool	EN: Positioner cylinder ADVANCE / DE: Positionierer vor
+TimOut3	%T12	Hex	EN: Positioner movement timeout / DE: Timeout Positionierer
+TimOut4	%T13	Hex	EN: Positioner movement timeout / DE: Timeout Positionierer
+CmdPinza	%M7.3	Bool	EN: Gripper clamp command / DE: Befehl Greifer
+YV317	%Q125.6	Bool	EN: Gripper cylinder OPEN / DE: Greifer OEFFNEN
+YV318	%Q125.7	Bool	EN: Gripper cylinder CLOSE / DE: Greifer SCHLIESSEN
+TimApre	%T4	Hex	EN: Gripper open timer / DE: Timer Greifer oeffnen
+TimChiude	%T5	Hex	EN: Gripper close timer / DE: Timer Greifer schliessen
+SQ331	%I1.0	Bool	EN: X-Axis at Pick / Nest pos / DE: X-Achse Nestposition
+SQ332	%I1.1	Bool	EN: X-Axis at Pre-Pick pos / DE: X-Achse Vor-Aufnahme
+SQ333	%I1.2	Bool	EN: X-Axis at Pre-Discharge pos / DE: X-Achse Vor-Abgabe
+SQ334	%I1.3	Bool	EN: X-Axis at Discharge pos / DE: X-Achse Abgabepos.
+CmdAsseX	%M7.4	Bool	EN: X-Axis movement command / DE: Befehl X-Achse
+YV311	%Q125.0	Bool	EN: Vertical axis brake valve / DE: Bremse Vertikalachse
+SQ335	%I1.4	Bool	EN: Y-Axis LOW position / DE: Y-Achse UNTEN
+SQ336	%I1.5	Bool	EN: Y-Axis Pre-Low position / DE: Y-Achse Vor-Unten
+SQ337	%I1.6	Bool	EN: Y-Axis Pre-High position / DE: Y-Achse Vor-Oben
+SQ338	%I1.7	Bool	EN: Y-Axis HIGH position / DE: Y-Achse OBEN
+CmdAsseY	%M7.5	Bool	EN: Y-Axis movement command / DE: Befehl Y-Achse
+SQ341	%I4.0	Bool	EN: Guide cylinder UP / DE: Fuehrungszylinder oben
+SQ342	%I4.1	Bool	EN: Guide cylinder DOWN / DE: Fuehrungszylinder unten
+SQ343	%I4.2	Bool	EN: Guide pusher ADVANCED / DE: Fuehrung/Schieber vorne
+SQ344	%I4.3	Bool	EN: Guide pusher RETRACTED / DE: Fuehrung/Schieber hinten
+CmdEstSirAl	%M7.6	Bool	EN: Guide cylinder up cmd / DE: Befehl Fuehrung auf
+CmdEstSirAv	%M7.7	Bool	EN: Guide pusher forward cmd / DE: Befehl Schieber vor
+YV361	%Q4.0	Bool	EN: Guide cylinder UP valve / DE: Fuehrung auf Ventil
+YV362	%Q4.1	Bool	EN: Guide cylinder DOWN valve / DE: Fuehrung ab Ventil
+YV363	%Q4.2	Bool	EN: Guide pusher ADVANCE valve / DE: Schieber vor Ventil
+YV364	%Q4.3	Bool	EN: Guide pusher RETRACT valve / DE: Schieber zurueck Ventil
+TimOut5	%T18	Hex	EN: Guide cylinder lift timeout / DE: Timeout Fuehrungszyl. auf
+TimOut6	%T21	Hex	EN: Guide pusher advance timeout / DE: Timeout Schieber vor
+J291	%I125.0	Bool	EN: Downstream machine ready / DE: Nachfolgemoschine bereit
+SP292	%I125.1	Bool	EN: Air pressure switch OK / DE: Druckluftwaechter OK
+B293	%I125.2	Bool	EN: Outfeed max level / DE: Auslaufstau maximal
+B323	%I0.2	Bool	EN: Nest present sensor / DE: Nest vorhanden Sensor
+B326	%I0.5	Bool	EN: Nest outfeed full / DE: Nest-Auslauf voll
+UE142_OK	%I125.6	Bool	EN: Safety relay OK / DE: Sicherheitsrelais OK
+PilzOk	%M235.6	Bool	EN: Safety circuits OK (Pilz) / DE: Sicherheitskreis OK
+SQ160	%I125.7	Bool	EN: Guard doors closed / DE: Schutztueren zu
+SB150	%I126.5	Bool	EN: Emergency stop healthy (NC) / DE: Not-Halt bereit (Ruhestrom)
+SB271	%I126.0	Bool	EN: Start pushbutton / DE: Start-Taster
+SB272	%I126.1	Bool	EN: Stop pushbutton / DE: Stopp-Taster
+SB273	%I126.2	Bool	EN: Reset pushbutton / DE: Reset/Quittier-Taster
+alr1	%M218.0	Bool	EN: SAFETY RELAY FAULT / DE: SICHERHEITSRELAIS AUSGELOEST
+alr2	%M218.1	Bool	EN: EMERGENCY STOP PRESSED / DE: NOT-HALT BETAETIGT
+alr5	%M218.4	Bool	EN: LOW AIR PRESSURE / DE: DRUCKLUFT ZU NIEDRIG
+alr7	%M218.6	Bool	EN: GUARD DOORS OPEN / DE: SCHUTZTUEREN OFFEN
+alr13	%M219.4	Bool	EN: EXTRACTION GUIDE NOT UP / DE: FUEHRUNG NICHT OBEN
+alr14	%M219.5	Bool	EN: EXTRACTION GUIDE NOT DOWN / DE: FUEHRUNG NICHT UNTEN
+alr15	%M219.6	Bool	EN: EXTRACTION GUIDE NOT FWD / DE: SCHIEBER NICHT VORN
+alr16	%M219.7	Bool	EN: EXTRACTION GUIDE NOT BACK / DE: SCHIEBER NICHT HINTEN
+alr17	%M220.0	Bool	EN: LIFTER NOT UP / DE: HEBER NICHT OBEN
+alr18	%M220.1	Bool	EN: LIFTER NOT DOWN / DE: HEBER NICHT UNTEN
+alr19	%M220.2	Bool	EN: POSITIONER NOT ADVANCED / DE: POSITIONIERER NICHT VORN
+alr20	%M220.3	Bool	EN: POSITIONER NOT RETRACTED / DE: POSITIONIERER NICHT ZURUECK
+alr21	%M220.4	Bool	EN: X-AXIS NOT ADVANCED / DE: X-ACHSE NICHT AUSGEFAHREN
+alr22	%M220.5	Bool	EN: X-AXIS NOT RETRACTED / DE: X-ACHSE NICHT EINGEFAHREN
+alr23	%M220.6	Bool	EN: Y-AXIS NOT DOWN / DE: Y-ACHSE NICHT UNTEN
+alr24	%M220.7	Bool	EN: Y-AXIS NOT UP / DE: Y-ACHSE NICHT OBEN
+alr25	%M221.0	Bool	EN: DISCHARGE NOT COMPLETED / DE: ABGABE NICHT AUSGEFUEHRT
+MasterRes	%M19.0	Bool	EN: Master reset running flag / DE: Master-Reset aktiv Merker
+Reset	%M238.2	Bool	EN: Reset pulse / DE: Reset-Impuls
+^Start	%M238.0	Bool	EN: Sequence / Diagnostic variable / DE: Schrittketten- / Diagnosevariable
+^Stop	%M238.1	Bool	EN: Sequence / Diagnostic variable / DE: Schrittketten- / Diagnosevariable

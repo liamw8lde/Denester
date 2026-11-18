@@ -1,0 +1,205 @@
+DATA_BLOCK "LAVORO" // DB100 — EN: Machine production data / DE: Maschinen-Betriebsdaten
+VERSION : 0.1
+STRUCT 	
+   DATO0 : WORD ;	
+   DATO2 : BYTE ;	
+   DATO3 : BYTE ;	
+   DATO4 : BYTE ;	
+   DATO5 : BYTE ;	
+   DATO6 : BYTE ;	
+   DATO7 : BYTE ;	
+   DATO8 : BYTE ;	
+   DATO9 : BYTE ;	
+   Velocita : INT ;	//velocita macchina
+   AppVelocita : INT ;	//appoggio calcolo velocita
+   AppNextPos : INT ;	//appoggio quota posizione successiva
+   AppNrPos : INT ;	//appoggio numero posizione
+   AppEncoder : DINT ;	//appoggio encoder
+   Vel : INT ;	
+   DATO24 : INT ;	
+   DATO26 : INT ;	
+   DATO28 : INT ;	
+   DATO30 : INT ;	
+   DATO32 : INT ;	
+   DATO34 : INT ;	
+   DATO36 : INT ;	
+   DATO38 : INT ;	
+   DATO40 : INT ;	
+   DATO42 : INT ;	
+   DATO44 : INT ;	
+   DATO46 : INT ;	
+   seq0 : BYTE ;	//numero passo sequenza 0
+   seq1 : BYTE ;	//numero passo sequenza 1
+   seq2 : BYTE ;	//numero passo sequenza 2
+   seq3 : BYTE ;	//numero passo sequenza 3
+   seq4 : BYTE ;	//numero passo sequenza 4
+   DATO54 : INT ;	
+   DATO56 : INT ;	
+   XPosizione : INT ;	//numero divisioni (acc/10ms)
+   YPosizione : INT ;	//numero incrementi (v%/divisioni)
+   DATO62 : INT ;	
+   dato64 : DWORD ;	
+   DATO68 : DWORD ;	
+   DATO72 : DWORD ;	
+   DATO76 : DWORD ;	
+   DATO80 : DWORD ;	
+   DATO84 : DWORD ;	
+   DATO88 : DWORD ;	
+   DATO92 : DWORD ;	
+   DATO96 : DWORD ;	
+   DATO100 : DWORD ;	
+   DATO104 : DWORD ;	
+   DATO108 : DWORD ;	
+   DATO112 : DWORD ;	
+   DATO116 : DWORD ;	
+   DATO120 : DWORD ;	
+   DATO124 : DWORD ;	
+   FORMATO : STRUCT 	//------------------------------------FORMATO OPERATIVO MACCHINA (128)
+    FormatoOperativo : BYTE ;	//NUMERO DI FORMATO OPERATIVO
+    LavaggioOperativo : BYTE ;	//NUMERO DI LAVAGGIO OPERATIVO
+    DATO130 : WORD ;	
+    DATO132 : WORD ;	
+    DATO134 : WORD ;	
+    Includi : STRUCT 	//Parametro[3] Selettori (136-137)
+     DATO136_0 : BOOL ;	
+     DATO136_1 : BOOL ;	
+     DATO136_2 : BOOL ;	
+     Formato160 : BOOL ;	//FORMATO 0=100 1=160
+     DATO136_4 : BOOL ;	
+     DATO136_5 : BOOL ;	
+     DATO136_6 : BOOL ;	
+     DATO136_7 : BOOL ;	
+     DATO137_0 : BOOL ;	
+     DATO137_1 : BOOL ;	
+     DATO137_2 : BOOL ;	
+     DATO137_3 : BOOL ;	
+     DATO137_4 : BOOL ;	
+     DATO137_5 : BOOL ;	
+     DATO137_6 : BOOL ;	
+     DATO137_7 : BOOL ;	
+    END_STRUCT ;	
+    DATO138 : DWORD ;	
+    DATO142 : DWORD ;	
+    DATO146 : DWORD ;	
+    DATO150 : DWORD ;	
+    DATO154 : DWORD ;	
+    DATO158 : DWORD ;	
+    DATO162 : DWORD ;	
+    DATO166 : DWORD ;	
+    DATO170 : S5TIME ;	
+    DATO172 : S5TIME ;	
+    DATO174 : S5TIME ;	
+    DATO176 : S5TIME ;	
+    DATO178 : S5TIME ;	
+    DATO180 : S5TIME ;	
+    DATO182 : S5TIME ;	
+    DATO184 : S5TIME ;	
+    DATO186 : S5TIME ;	
+    DATO188 : S5TIME ;	
+   END_STRUCT ;	
+   PARAMETRI : STRUCT 	//------------------------------------PARAMETRI MACCHINA (190)
+    SecPinzaOn : S5TIME  := S5T#500MS;	//tempo chiusiura pinza
+    SecPinzaOff : S5TIME  := S5T#500MS;	//tempo apertura pinza
+    SecScaMaxOn : S5TIME  := S5T#2S;	//tempo scarico massimo ON
+    SecScaMaxOff : S5TIME  := S5T#2S;	//tempo scarico massimo OFF
+    SecScaNestOn : S5TIME ;	//tempo scarico massimo nest ON
+    SecScaNestOff : S5TIME ;	//tempo scarico massimo nest OFF
+    DATO202 : S5TIME ;	
+    DATO204 : S5TIME ;	
+    DATO206 : S5TIME ;	
+    DATO208 : S5TIME ;	
+    DATO210 : S5TIME ;	
+    DATO212 : WORD ;	
+    DATO214 : WORD ;	
+    DATO216 : WORD ;	
+    DATO218 : WORD ;	
+    DATO220 : WORD ;	
+    DATO222 : WORD ;	
+    DATO224 : WORD ;	
+    DATO226 : WORD ;	
+    AsseX : STRUCT 	
+     AvantiVeloce : BYTE ;	//X nest avanti veloce
+     AvantiAcc : BYTE ;	//X nest avanti lento
+     AvantiDec : BYTE ;	//X nest avanti fermo forza di stazionamento
+     IndietroVeloce : BYTE ;	//X nest indietro veloce
+     IndietroAcc : BYTE ;	//X nest indietro lento
+     IndietroDec : BYTE ;	//X nest indietro fermo forza di stazionamento
+    END_STRUCT ;	
+    AsseY : STRUCT 	
+     BassoVeloce : BYTE ;	//Y nest basso veloce
+     BassoAcc : BYTE ;	//Y nest basso lento
+     BassoDec : BYTE ;	//Y nest basso fermo forza di stazionamento
+     AltoVeloce : BYTE ;	//Y nest alto veloce
+     AltoAcc : BYTE ;	//Y nest alto lento
+     AltoDec : BYTE ;	//Y nest alto fermo forza di stazionamento
+    END_STRUCT ;	
+   END_STRUCT ;	
+   SELETTORI : STRUCT 	//------------------------------------SELETTORI MACCHINA (240-241-242-243-244-24)
+    Normali : STRUCT 	//selettori normali (240-241)
+     DATO240_0 : BOOL ;	
+     AbilitaDaValle : BOOL ;	//abilitazione da macchina a valle
+     DATO240_2 : BOOL ;	
+     DATO240_3 : BOOL ;	
+     DATO240_4 : BOOL ;	
+     DATO240_5 : BOOL ;	
+     DATO240_6 : BOOL ;	
+     DATO240_7 : BOOL ;	
+     TaraturaAsseX : BOOL ;	
+     TaraturaAsseY : BOOL ;	
+     DATO241_2 : BOOL ;	
+     DATO241_3 : BOOL ;	
+     DATO241_4 : BOOL ;	
+     DATO241_5 : BOOL ;	
+     DATO241_6 : BOOL ;	
+     DATO241_7 : BOOL ;	
+    END_STRUCT ;	
+    Rapidi : STRUCT 	//selettori rapidi o con password speciale (242-243)
+     DATO242_0 : BOOL ;	
+     SimulaProdotto : BOOL ;	//simulazione prodotto
+     DATO242_2 : BOOL ;	
+     DATO242_3 : BOOL ;	
+     DATO242_4 : BOOL ;	
+     Svuotamento : BOOL ;	//svuotamento
+     DATO242_6 : BOOL ;	
+     DATO242_7 : BOOL ;	
+     DATO243_0 : BOOL ;	
+     DATO243_1 : BOOL ;	
+     DATO243_2 : BOOL ;	
+     DATO243_3 : BOOL ;	
+     DATO243_4 : BOOL ;	
+     DATO243_5 : BOOL ;	
+     DATO243_6 : BOOL ;	
+     DATO243_7 : BOOL ;	
+    END_STRUCT ;	
+    SemiAuto : STRUCT 	//selettori per regolazioni semiautomatiche (244-245)
+     DATO244_0 : BOOL ;	
+     DATO244_1 : BOOL ;	
+     DATO244_2 : BOOL ;	
+     DATO244_3 : BOOL ;	
+     DATO244_4 : BOOL ;	
+     DATO244_5 : BOOL ;	
+     DATO244_6 : BOOL ;	
+     DATO244_7 : BOOL ;	
+     DATO245_0 : BOOL ;	
+     DATO245_1 : BOOL ;	
+     DATO245_2 : BOOL ;	
+     DATO245_3 : BOOL ;	
+     DATO245_4 : BOOL ;	
+     DATO245_5 : BOOL ;	
+     DATO245_6 : BOOL ;	
+     DATO245_7 : BOOL ;	
+    END_STRUCT ;	
+   END_STRUCT ;	
+   DATO246 : BYTE ;	
+   DATO247 : BYTE ;	
+   DATO248 : BYTE ;	
+   DATO249 : BYTE ;	
+   DATO250 : BYTE ;	
+   DATO251 : BYTE ;	
+   DATO252 : BYTE ;	
+   DATO253 : BYTE ;	
+   DATO254 : BYTE ;	
+   DATO255 : BYTE ;	
+  END_STRUCT ;
+BEGIN
+END_DATA_BLOCK
