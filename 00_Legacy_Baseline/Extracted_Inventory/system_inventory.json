@@ -1,0 +1,815 @@
+{
+  "project_metadata": {
+    "station_name": "MP1P-Ferring",
+    "oem_vendor": "CORIMA / IMA Life (Siena, Italy)",
+    "oem_job_code": "C6060007.FER_SER_C6105006",
+    "archive_file": "00_Legacy_Baseline/PLC_HMI_Archive/C6060007S_12.zip",
+    "archive_size_bytes": 683720,
+    "archive_sha256": "be11cbb587e918abfe7dce6af199d73650c7f5071f06933ff3141f4466b86879",
+    "original_validated_backup_date": "2016-03-17",
+    "denester_fault_translation_date": "2026-09-16",
+    "mc7_logic_modified_in_sept2026": false
+  },
+  "counts": {
+    "total_symbols": 362,
+    "physical_io_tags": 63,
+    "plc_blocks": 31,
+    "know_how_protected_blocks": 0,
+    "mc7_modified_blocks_vs_2016": 0,
+    "protool_screens": 37,
+    "sept2026_symbol_translations": 362
+  },
+  "hardware_rack": [
+    {
+      "slot": 2,
+      "module": "SIMATIC S7-300 CPU 313C",
+      "order_number": "6ES7 313-5BE00-0AB0",
+      "firmware": "V1.0",
+      "interfaces": "MPI only (187.5 kbps, Address 2) — No PROFINET/Ethernet",
+      "io_addresses": "DI24: I 124..126 | DO16: Q 124..125 | AI5/AO2: PIW 752..761 / PQW 752..755 | HSC: PID 768..783",
+      "siemens_lifecycle": "V1.0 obsolete; S7-300 family PM410 Type Discontinuation on 2025-10-01",
+      "target_tia_replacement": "CPU 1512C-1 PN (6ES7 512-1CK01-0AB0) w/ onboard DI32/DQ32, AI5/AQ2, 6x HSC & PROFINET"
+    },
+    {
+      "slot": 4,
+      "module": "SM 321 DI16xDC24V",
+      "order_number": "6ES7 321-1BH01-0AA0",
+      "firmware": "Standard",
+      "interfaces": "S7-300 Backplane Bus",
+      "io_addresses": "DI16: I 0.0..1.7",
+      "siemens_lifecycle": "PM410 Type Discontinuation on 2025-10-01 (spare-parts phase)",
+      "target_tia_replacement": "S7-1500 MP DI 16x24VDC BA/HF or onboard CPU 1512C-1 PN DI channels"
+    },
+    {
+      "slot": 5,
+      "module": "SM 323 DI16/DO16xDC24V/0.5A",
+      "order_number": "6ES7 323-1BL00-0AA0",
+      "firmware": "Standard",
+      "interfaces": "S7-300 Backplane Bus",
+      "io_addresses": "DI16: I 4.0..5.7 | DO16: Q 4.0..5.7",
+      "siemens_lifecycle": "PM410 Type Discontinuation on 2025-10-01 (spare-parts phase)",
+      "target_tia_replacement": "S7-1500 DI 16x24VDC + DQ 16x24VDC/0.5A ST (or ET 200SP compact I/O)"
+    }
+  ],
+  "hmi_protool": {
+    "project_name": "C6060007H_10",
+    "panel_model": "SIMATIC TP170B Color",
+    "siemens_order_number": "6AV6 545-0BC15-2AX0",
+    "engineering_software": "SIMATIC ProTool V6.0 (Base template v2.1, 2004-04-02)",
+    "creator": "Alessandro Zani",
+    "display": "5.7\" STN 256-color resistive touch, 320 x 240 px (QVGA)",
+    "panel_cutout_mm": "197 x 141 mm",
+    "network": "MPI 187.5 kbps integrated with CPU 313C",
+    "siemens_lifecycle": "End of Life 2013; PM490 Total Discontinuation on 2017-04-01",
+    "target_tia_replacement": "SIMATIC HMI MTP700 Unified Comfort (6AV2128-3GB06-0AX1) — Exact 197 x 141 mm cutout match; avoids classic TP700 Comfort PM400 phase-out (2026-01-31)",
+    "screen_count": 37,
+    "screens": [
+      "START",
+      "MAIN",
+      "MENU",
+      "STATI_MACCHINA1",
+      "ACK_ALLARMI",
+      "SELETTORI1",
+      "SELEZIONI1",
+      "FORMATO",
+      "FORMATO_SELEZIONE",
+      "FORMATO_VISUALIZZA_1",
+      "FORMATO_MODIFICA_1",
+      "FORMATO_MEMORIZZA",
+      "FORMATO_IMPOSTA",
+      "FORMATO_CANCELLA",
+      "FORMATO_FINE",
+      "PARAMETRI1",
+      "PARAMETRI2",
+      "PARAMETRI3",
+      "TARATURA1",
+      "DATI_PRODUZIONE1",
+      "DATI_PRODUZIONE_RESET",
+      "PULIZIA",
+      "MANUTENZIONE",
+      "DIAGNOSTICA",
+      "SERVIZIO1",
+      "SERVIZIO2",
+      "CONTROLLO_COMANDO_VARIABILI",
+      "CONTROLLO_VARAIBILI_ON",
+      "FORZA_USCITE",
+      "FORZA_USCITE_ON",
+      "TEST_MESSAGGI",
+      "PASSWORD",
+      "LINGUA",
+      "DATA_ORA",
+      "CONTRASTO",
+      "VERSIONE_SW",
+      "RISERVATO"
+    ],
+    "embedded_runtime_languages": [
+      "Italian (IT)",
+      "German (DE)"
+    ],
+    "gmp_compliance_gaps": [
+      "Shared numeric password table (no unique user IDs or password aging)",
+      "Zero electronic audit trail for recipe/timer/axis parameter edits (EU GMP Annex 11 Cl. 9)",
+      "Unrestricted raw PLC output/variable forcing screens (FORZA_USCITE / CONTROLLO_COMANDO_VARIABILI)",
+      "TIA Portal V19/V20 cannot directly import ProTool (.PDB) projects — requires legacy intermediate migration or clean WinCC Unified rebuild"
+    ],
+    "raw_forcing_tags_detected": [
+      "HMI.CONTROLLO_VARIABILI.AreaR1HMI.VAR_OP.SOFTWARE.VSW_VERSIONE_PLC_LHMI.VAR_OP.SOFTWARE.VSW_DATA_OP_MHMI.VAR_OP.SOFTWARE.VSW_DATA_OP_DMERKER.VFORCEOUT_RQSTLAVORO.PARAMETRI.AsseY.AltoAccHMI.VAR_OP.SOFTWARE.VSW_VERSIONE_OP_HHMI.CONTROLLO_VARIABILI.AreaR5HMI.VAR_OP.SOFTWARE.VSW_DATA_PLC_MHMI.VAR_OP.SOFTWARE.VSW_VERSIONE_OP_LSYS.LINGUA_COPIAHMI.VAR_OP.SOFTWARE.VSW_PROGRAMMA_OPHMI.VAR_OP.SOFTWARE.VSW_DATA_PLC_YLAVORO.PARAMETRI.AsseY.AltoDecHMI.CONTROLLO_VARIABILI.AreaR2LAVORO.PARAMETRI.AsseY.BassoAccHMI.CONTROLLO_VARIABILI.AreaR3LAVORO.PARAMETRI.AsseY.BassoVeloceHMI.CONTROLLO_VARIABILI.AreaR4HMI.VAR_OP.LinguaHMI.PAGE_NEWHMI.CONTROLLO_VARIABILI.IndirizzoR1HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT0HMI.CONTROLLO_VARIABILI.IndirizzoR2HMI.CONTROLLO_VARIABILI.IndirizzoR3HMI.CONTROLLO_VARIABILI.IndirizzoR4HMI.CONTROLLO_VARIABILI.ValoreR1HMI.CONTROLLO_VARIABILI.ValoreR2HMI.CONTROLLO_VARIABILI.ValoreR3HMI.CONTROLLO_VARIABILI.ValoreR4HMI.FORZATURA_USCITE.ByteDiComandoHMI.CONTROLLO_VARIABILI.IndirizzoR5HMI.CONTROLLO_VARIABILI.Force.R5HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R5HMI.CONTROLLO_VARIABILI.ValoreR5MERKER.AVVISI_RAPIDOHMI.BUFFER_RICETTA.D03_SelettoriSYS.OFFSET_X_RICETTASYS.OFFSET_X_RAPIDO",
+      "HMI.CONTROLLO_VARIABILI.Force.R1MERKER.VFVAR_EN1MERKER.VFVAR_EN2LAVORO.PARAMETRI.AsseX.IndietroDecHMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R1SYS.DP_AVVISIHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT1MERKER.WARNIN_ONSYS.OFFSET_Y_RICETTAHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT2HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT3HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT4HMI.VAR_OP.LavaggioOperativoHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT5HMI.CO",
+      "HMI.CONTROLLO_VARIABILI.Force.R1MERKER.VFVAR_EN1MERKER.VFVAR_EN2LAVORO.PARAMETRI.AsseX.IndietroDecHMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R1SYS.DP_AVVISIHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT1MERKER.WARNIN_ONSYS.OFFSET_Y_RICETTAHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT2HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT3HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT4HMI.VAR_OP.LavaggioOperativoHMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT5HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT6HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT7HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R2HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R3PT",
+      "HMI.CONTROLLO_VARIABILI.VFORCEOUT_BIT7HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R2HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R3PT",
+      "HMI.CONTROLLO_VARIABILI.VFVAR_FORCE_EN_R4HMI.BUFFER_RICETTA.D03_Selettori.Formato160SYS.Z3MERKER.TESTMESS_POINTERMERKER.PSW_RQSTHMI.CONTROLLO_VARIABILI.Force.R2HMI.CONTROLLO_VARIABILI.Force.R3HMI.CONTROLLO_VARIABILI.Force.R4PT"
+    ]
+  },
+  "vis_interface_firewall": {
+    "interface_type": "Hardwired 24VDC dry-contact & VFD discrete interlocks (No fieldbus/OPC UA)",
+    "signals": [
+      {
+        "tag": "J291",
+        "iec_address": "I 125.0",
+        "step7_address": "E     125.0",
+        "direction": "DI",
+        "data_type": "BOOL",
+        "rack_module": "Slot 2: CPU 313C Onboard DI24/DO16 (124..126)",
+        "subsystem_group": "Downstream Visual Inspection (VI) Interface",
+        "description_en": "Downstream machine ready",
+        "description_de": "Nachfolgemoschine bereit",
+        "description_it_2016": "abilitazione da macchina a valle"
+      },
+      {
+        "tag": "B293",
+        "iec_address": "I 125.2",
+        "step7_address": "E     125.2",
+        "direction": "DI",
+        "data_type": "BOOL",
+        "rack_module": "Slot 2: CPU 313C Onboard DI24/DO16 (124..126)",
+        "subsystem_group": "Downstream Visual Inspection (VI) Interface",
+        "description_en": "Outfeed max level",
+        "description_de": "Auslaufstau maximal",
+        "description_it_2016": "Scarico massimo uscita"
+      },
+      {
+        "tag": "UE76_OK",
+        "iec_address": "I 125.3",
+        "step7_address": "E     125.3",
+        "direction": "DI",
+        "data_type": "BOOL",
+        "rack_module": "Slot 2: CPU 313C Onboard DI24/DO16 (124..126)",
+        "subsystem_group": "Downstream Visual Inspection (VI) Interface",
+        "description_en": "Infeed belt inverter OK",
+        "description_de": "Inverter Verb.band OK",
+        "description_it_2016": "invertre nastro collegamento OK"
+      },
+      {
+        "tag": "UE76_RUN",
+        "iec_address": "Q 125.1",
+        "step7_address": "A     125.1",
+        "direction": "DO",
+        "data_type": "BOOL",
+        "rack_module": "Slot 2: CPU 313C Onboard DI24/DO16 (124..126)",
+        "subsystem_group": "Downstream Visual Inspection (VI) Interface",
+        "description_en": "Infeed belt inverter RUN",
+        "description_de": "Inverter Verb.band EIN",
+        "description_it_2016": "marcia inverter nastro di collegamento"
+      }
+    ],
+    "gamp5_validation_significance": "Preserving identical 24VDC electrical behavior on J291 (I 125.0), B293 (I 125.2), and connecting conveyor UE76 (Q 125.1 / I 125.3) isolates the upgrade from the validated Downstream Visual Inspection System (Zero VI Re-Qualification Impact)."
+  },
+  "nest_recipes_offline": [
+    {
+      "db": "DB12",
+      "nest_format_syringes": 64,
+      "active_rows": 8,
+      "encoder_row_targets_deg_or_pulses": [
+        150,
+        275,
+        400,
+        525,
+        650,
+        775,
+        900,
+        1025
+      ],
+      "saved_offline": true
+    },
+    {
+      "db": "DB10",
+      "nest_format_syringes": 100,
+      "active_rows": 10,
+      "encoder_row_targets_deg_or_pulses": [
+        29,
+        128,
+        229,
+        320,
+        419,
+        518,
+        617,
+        716,
+        815,
+        914
+      ],
+      "saved_offline": true
+    },
+    {
+      "db": "DB11",
+      "nest_format_syringes": 160,
+      "active_rows": 16,
+      "encoder_row_targets_deg_or_pulses": [
+        648,
+        725,
+        802,
+        879,
+        950,
+        1033,
+        1104,
+        1181,
+        1258,
+        1335,
+        1406,
+        49,
+        120,
+        197,
+        274,
+        351
+      ],
+      "saved_offline": true
+    }
+  ],
+  "offline_zero_parameter_audit": {
+    "DB20_DATI_ASSE_X_words": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "DB21_DATI_ASSE_Y_words": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "DB20_motion_setpoints_all_zero_offline": true,
+    "DB21_motion_setpoints_all_zero_offline": true,
+    "DB106_BUFFER_RICETTA_nonzero_bytes": 0,
+    "critical_finding": "All X/Y proportional valve velocities, ramps, holding forces (DB20/DB21 words 0..8) and active HMI recipe buffer setpoints (DB106) are 0 in the offline STEP 7 project. Tuned production values reside ONLY in the discontinued TP170B Color Flash memory and CPU 313C RAM."
+  },
+  "plc_blocks": [
+    {
+      "block": "DB10",
+      "type": "DB",
+      "number": 10,
+      "symbol": "DATI_NEST100_1",
+      "description_en": "100-nest recipe data (1 clamp)",
+      "description_de": "Rezeptdaten 100er Nest",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 54,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB11",
+      "type": "DB",
+      "number": 11,
+      "symbol": "DATI_NEST160_1",
+      "description_en": "160-nest recipe data (1 clamp)",
+      "description_de": "Rezeptdaten 160er Nest",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 54,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB12",
+      "type": "DB",
+      "number": 12,
+      "symbol": "DATI_NEST64_1",
+      "description_en": "64-nest recipe data (1 clamp)",
+      "description_de": "Rezeptdaten 64er Nest",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 54,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB20",
+      "type": "DB",
+      "number": 20,
+      "symbol": "DATI_ASSE_X",
+      "description_en": "X-Axis parameters/data",
+      "description_de": "X-Achse Daten",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 20,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB21",
+      "type": "DB",
+      "number": 21,
+      "symbol": "DATI_ASSE_Y",
+      "description_en": "Y-Axis parameters/data",
+      "description_de": "Y-Achse Daten",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 20,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB90",
+      "type": "DB",
+      "number": 90,
+      "symbol": "DATI_ENCODER",
+      "description_en": "Machine encoder data",
+      "description_de": "Maschinen-Encoderdaten",
+      "author": "SIMATIC\u0000",
+      "mc7_bytes": 34,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB100",
+      "type": "DB",
+      "number": 100,
+      "symbol": "LAVORO",
+      "description_en": "Machine production data",
+      "description_de": "Maschinen-Betriebsdaten",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 256,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB105",
+      "type": "DB",
+      "number": 105,
+      "symbol": "MERKER",
+      "description_en": "Merker flag data",
+      "description_de": "Merker-Daten",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 40,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "DB106",
+      "type": "DB",
+      "number": 106,
+      "symbol": "HMI",
+      "description_en": "HMI interface data",
+      "description_de": "HMI Schnittstellendaten",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 552,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FB11",
+      "type": "FB",
+      "number": 11,
+      "symbol": "MOV_ASSE",
+      "description_en": "Pneumatic axis movement control",
+      "description_de": "Pneumatikachse Bewegung",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 802,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FB50",
+      "type": "FB",
+      "number": 50,
+      "symbol": "CALCOLO_PASSO",
+      "description_en": "Format pitch calculation",
+      "description_de": "Schritt-Berechnung Format",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 94,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC10",
+      "type": "FC",
+      "number": 10,
+      "symbol": "SEQUENCER",
+      "description_en": "Sequence step manager",
+      "description_de": "Schrittketten-Verwaltung",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 32,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC11",
+      "type": "FC",
+      "number": 11,
+      "symbol": "MOV_PISTONE",
+      "description_en": "Piston movement control",
+      "description_de": "Zylinderbewegung Steuerung",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 102,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC40",
+      "type": "FC",
+      "number": 40,
+      "symbol": "SYS_TP170_M6",
+      "description_en": "TP170 HMI interface control",
+      "description_de": "TP170 HMI Schnittstelle",
+      "author": "corima\u0000\u0000",
+      "mc7_bytes": 3842,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC51",
+      "type": "FC",
+      "number": 51,
+      "symbol": "SCALING_I2W",
+      "description_en": "Analog scaling INT to WORD",
+      "description_de": "Analogwert-Skalierung",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 102,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC99",
+      "type": "FC",
+      "number": 99,
+      "symbol": "MOT_NEST",
+      "description_en": "Nest conveyor motor control",
+      "description_de": "Nest-Transportband Motor",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 710,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC100",
+      "type": "FC",
+      "number": 100,
+      "symbol": "STATI",
+      "description_en": "Machine state manager",
+      "description_de": "Maschinen-Zustandsverwaltung",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 110,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC101",
+      "type": "FC",
+      "number": 101,
+      "symbol": "CONTAPEZZI",
+      "description_en": "HMI terminal interface",
+      "description_de": "Bedienterminal-Schnittstelle",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 368,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC102",
+      "type": "FC",
+      "number": 102,
+      "symbol": "PISTONI",
+      "description_en": "Valve outputs control",
+      "description_de": "Ventilausgaenge Steuerung",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 990,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC103",
+      "type": "FC",
+      "number": 103,
+      "symbol": "SICUREZZA",
+      "description_en": "Safety interlocks logic",
+      "description_de": "Sicherheitsverriegelung",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 64,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC104",
+      "type": "FC",
+      "number": 104,
+      "symbol": "LAMPADA_COLONNA",
+      "description_en": "Beacon lamp control",
+      "description_de": "Signalsaeulen-Steuerung",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 92,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC105",
+      "type": "FC",
+      "number": 105,
+      "symbol": "MASTER_RESET",
+      "description_en": "Master reset control",
+      "description_de": "Master-Reset Steuerung",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 108,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC106",
+      "type": "FC",
+      "number": 106,
+      "symbol": "SEQ1_SOL_SIRINGHE",
+      "description_en": "Seq 1: Syringe lifter",
+      "description_de": "Seq 1: Spritzenheber",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 510,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC107",
+      "type": "FC",
+      "number": 107,
+      "symbol": "SEQ2_TRA_SIRINGHE",
+      "description_en": "Seq 2: Syringe transfer head",
+      "description_de": "Seq 2: Spritzenumsetzer",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 492,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC108",
+      "type": "FC",
+      "number": 108,
+      "symbol": "SCA_SIRINGHE",
+      "description_en": "Syringe discharge manager",
+      "description_de": "Spritzen-Entleerung",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 120,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "FC109",
+      "type": "FC",
+      "number": 109,
+      "symbol": "SEQ3_GUIDA_SIRINGHE",
+      "description_en": "Seq 3: Extraction guide",
+      "description_de": "Seq 3: Entnahmefuehrung",
+      "author": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "mc7_bytes": 338,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "OB1",
+      "type": "OB",
+      "number": 1,
+      "symbol": "MAIN",
+      "description_en": "General routine / Main loop",
+      "description_de": "Hauptprogramm Allgemein",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 322,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "OB100",
+      "type": "OB",
+      "number": 100,
+      "symbol": "AVVIAMENTO",
+      "description_en": "Startup routine (Power on)",
+      "description_de": "Anlaufprogramm / Neustart",
+      "author": "CORIMA\u0000\u0000",
+      "mc7_bytes": 18,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "SFB47",
+      "type": "SFB",
+      "number": 47,
+      "symbol": "COUNT",
+      "description_en": "Common counter module",
+      "description_de": "Zaehlermodul",
+      "author": "SIMATIC\u0000",
+      "mc7_bytes": 2,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "SFC0",
+      "type": "SFC",
+      "number": 0,
+      "symbol": "SET_CLK",
+      "description_en": "Set System Clock",
+      "description_de": "Systemuhr stellen",
+      "author": "SIMATIC\u0000",
+      "mc7_bytes": 2,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    },
+    {
+      "block": "SFC1",
+      "type": "SFC",
+      "number": 1,
+      "symbol": "READ_CLK",
+      "description_en": "Read System Clock",
+      "description_de": "Systemuhr lesen",
+      "author": "SIMATIC\u0000",
+      "mc7_bytes": 2,
+      "know_how_protected": false,
+      "checksum_matches_2016_backup": true
+    }
+  ],
+  "call_graph": [
+    {
+      "caller": "OB1",
+      "callee": "FC107"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC106"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC108"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC101"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC104"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC100"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC105"
+    },
+    {
+      "caller": "OB1",
+      "callee": "DB100"
+    },
+    {
+      "caller": "OB1",
+      "callee": "DB105"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC40"
+    },
+    {
+      "caller": "FB11",
+      "callee": "FC51"
+    },
+    {
+      "caller": "FC40",
+      "callee": "DB106"
+    },
+    {
+      "caller": "FC40",
+      "callee": "DB99999"
+    },
+    {
+      "caller": "FC40",
+      "callee": "SFC1"
+    },
+    {
+      "caller": "FC40",
+      "callee": "SFC0"
+    },
+    {
+      "caller": "FC40",
+      "callee": "DB105"
+    },
+    {
+      "caller": "FC40",
+      "callee": "DB100"
+    },
+    {
+      "caller": "FC99",
+      "callee": "FB50"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB106"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB100"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB90"
+    },
+    {
+      "caller": "FC99",
+      "callee": "SFB47"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB10"
+    },
+    {
+      "caller": "FC101",
+      "callee": "DB106"
+    },
+    {
+      "caller": "FC102",
+      "callee": "FC11"
+    },
+    {
+      "caller": "FC102",
+      "callee": "DB20"
+    },
+    {
+      "caller": "FC102",
+      "callee": "FB11"
+    },
+    {
+      "caller": "FC106",
+      "callee": "DB100"
+    },
+    {
+      "caller": "FC106",
+      "callee": "FC10"
+    },
+    {
+      "caller": "FC107",
+      "callee": "DB100"
+    },
+    {
+      "caller": "FC107",
+      "callee": "FC10"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB11"
+    },
+    {
+      "caller": "FC102",
+      "callee": "DB100"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC109"
+    },
+    {
+      "caller": "FC108",
+      "callee": "DB100"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC102"
+    },
+    {
+      "caller": "FC109",
+      "callee": "DB100"
+    },
+    {
+      "caller": "FC109",
+      "callee": "FC10"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC103"
+    },
+    {
+      "caller": "FC102",
+      "callee": "DB21"
+    },
+    {
+      "caller": "FC101",
+      "callee": "DB100"
+    },
+    {
+      "caller": "OB1",
+      "callee": "FC99"
+    },
+    {
+      "caller": "FC99",
+      "callee": "DB12"
+    }
+  ]
+}

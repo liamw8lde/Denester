@@ -1,0 +1,64 @@
+tag,iec_address,step7_address,direction,data_type,rack_module,subsystem_group,description_en,description_de,description_it_2016
+J291,I 125.0,E     125.0,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Downstream Visual Inspection (VI) Interface,Downstream machine ready,Nachfolgemoschine bereit,abilitazione da macchina a valle
+B293,I 125.2,E     125.2,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Downstream Visual Inspection (VI) Interface,Outfeed max level,Auslaufstau maximal,Scarico massimo uscita
+UE76_OK,I 125.3,E     125.3,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Downstream Visual Inspection (VI) Interface,Infeed belt inverter OK,Inverter Verb.band OK,invertre nastro collegamento OK
+UE76_RUN,Q 125.1,A     125.1,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Downstream Visual Inspection (VI) Interface,Infeed belt inverter RUN,Inverter Verb.band EIN,marcia inverter nastro di collegamento
+B321,I 0.0,E       0.0,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Nest not seated on belt,Nest nicht pos. auf Band,nest non posizionato su nastro
+B322,I 0.1,E       0.1,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Syringes discharge complete,Spritzen entleert,avvenuto scarico siringhe
+B323,I 0.2,E       0.2,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Nest present sensor,Nest vorhanden Sensor,presenza nest
+SQ324,I 0.3,E       0.3,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Lifter cylinder UP sensor,Heber OBEN Sensor,pistone sollevamento siringhe alto
+SQ325,I 0.4,E       0.4,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Lifter cylinder DOWN sensor,Heber UNTEN Sensor,pistone sollevamento siringhe basso
+B326,I 0.5,E       0.5,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Nest outfeed full,Nest-Auslauf voll,scarico massimo nest
+SQ327,I 0.6,E       0.6,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Positioner cylinder RETRACT,Positionierer zurueck,pistone posizionatore siringhe retratto
+SQ328,I 0.7,E       0.7,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),Machine Sequence & Nest Presence Sensors,Positioner cylinder ADVANCE,Positionierer vor,pistone posizionatore siringhe esteso
+SQ288,I 124.7,E     124.7,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Machine Sequence & Nest Presence Sensors,Nest belt manual unlock,Entriegelung Nestband,sblocco nastro nest
+SQ341,I 4.0,E       4.0,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Machine Sequence & Nest Presence Sensors,Guide cylinder UP,Fuehrungszylinder oben,guida estrazione siringhe alta
+SQ342,I 4.1,E       4.1,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Machine Sequence & Nest Presence Sensors,Guide cylinder DOWN,Fuehrungszylinder unten,guida estrazione siringhe bassa
+SQ343,I 4.2,E       4.2,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Machine Sequence & Nest Presence Sensors,Guide pusher ADVANCED,Fuehrung/Schieber vorne,guida estrazione siringhe avanti
+SQ344,I 4.3,E       4.3,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Machine Sequence & Nest Presence Sensors,Guide pusher RETRACTED,Fuehrung/Schieber hinten,guida estrazione siringhe indietro
+UE71_OK,I 125.5,E     125.5,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Belt VFD Drive (UE71),Nest belt inverter OK,Inverter Nestband OK,inverter nastro nest OK
+UE71_RUN,Q 124.6,A     124.6,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Belt VFD Drive (UE71),Nest belt inverter RUN,Inverter Nestband EIN,marcia inverter nastro nest
+DRV_RST,Q 124.7,A     124.7,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Belt VFD Drive (UE71),Reset all inverters,Inverter-Reset,reset inverters
+BQ281_A,I 124.0,E     124.0,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Encoder track A,Encoder Spur A,encoder A
+BQ281_B,I 124.1,E     124.1,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Encoder track B,Encoder Spur B,encoder B
+BQ281_Z,I 124.2,E     124.2,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Encoder index Z,Encoder Nullimpuls Z,encoder Z
+BQ281_RD,I 124.3,E     124.3,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Encoder READY,Encoder BEREIT,encoder READY
+BQ281_RESERVED,I 125.4,E     125.4,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Reserved encoder count,Reserve Encoder-Zaehlung,riservato conteggio encoder
+BQ281_COUNT,PID 768,PED   768,AI/HSC Input,DWORD,Slot 2: CPU 313C HSC (768..783),Nest Quadrature Encoder (BQ281),gradi encoder,gradi encoder,gradi encoder
+QB281_RESERVED1,Q 124.0,A     124.0,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Reserved encoder count,Reserve Encoder-Zaehlung,riservato conteggio encoder
+BQ281_RST,Q 124.5,A     124.5,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Nest Quadrature Encoder (BQ281),Reset encoder,Encoder-Reset,reset encoder
+SB271,I 126.0,E     126.0,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Operator Pushbuttons,Start pushbutton,Start-Taster,pulsante di start
+SB272,I 126.1,E     126.1,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Operator Pushbuttons,Stop pushbutton,Stopp-Taster,pulsante di stop
+SB273,I 126.2,E     126.2,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Operator Pushbuttons,Reset pushbutton,Reset/Quittier-Taster,pulsante di ripristino
+SB274,I 126.3,E     126.3,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Operator Pushbuttons,Jog pushbutton,Tippbetrieb-Taster,pulsante marcia impulsi
+SB274_ON,I 126.4,E     126.4,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Operator Pushbuttons,Jog mode engaged,Tippbetrieb aktiv,pulsante marcia impulsi inserito
+SP292,I 125.1,E     125.1,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),"Safety Circuit, Guards & Air Supervision",Air pressure switch OK,Druckluftwaechter OK,pressostato aria
+UE142_OK,I 125.6,E     125.6,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),"Safety Circuit, Guards & Air Supervision",Safety relay OK,Sicherheitsrelais OK,modulo di sicurezza OK
+SQ160,I 125.7,E     125.7,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),"Safety Circuit, Guards & Air Supervision",Guard doors closed,Schutztueren zu,protezioni chiuse
+SB150,I 126.5,E     126.5,DI,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),"Safety Circuit, Guards & Air Supervision",Emergency stop healthy (NC),Not-Halt bereit (Ruhestrom),emergenza armata
+SQ351,I 5.0,E       5.0,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),"Safety Circuit, Guards & Air Supervision",Guard cover 1 open,Schutzabdeckung 1 offen,carter 1 aperto
+SQ352,I 5.1,E       5.1,DI,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),"Safety Circuit, Guards & Air Supervision",Guard cover 2 open,Schutzabdeckung 2 offen,carter 2 aperto
+YV311,Q 125.0,A     125.0,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),"Safety Circuit, Guards & Air Supervision",Vertical axis brake valve,Bremse Vertikalachse,valvola blocco asse verticale
+HL302,Q 124.1,A     124.1,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Signal Beacon Tower,Beacon lamp GREEN,Signalsaeule GRUEN,lampada colonna VERDE
+HL303,Q 124.2,A     124.2,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Signal Beacon Tower,Beacon lamp ORANGE,Signalsaeule ORANGE,lampada colonna ARANCIO
+HL304,Q 124.3,A     124.3,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Signal Beacon Tower,Beacon lamp RED,Signalsaeule ROT,lampada colonna ROSSA
+YV313,Q 125.2,A     125.2,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Lifter cylinder RETRACT,Heber zurueck / UNTEN,pistone sollevatore siringhe retratto
+YV314,Q 125.3,A     125.3,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Lifter cylinder EXTEND,Heber vor / OBEN,pistone sollevatore siringhe esteso
+YV315,Q 125.4,A     125.4,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Positioner cylinder RETRACT,Positionierer zurueck,pistone posizionatore siringhe retratto
+YV316,Q 125.5,A     125.5,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Positioner cylinder ADVANCE,Positionierer vor,pistone posizionatore siringhe esteso
+YV317,Q 125.6,A     125.6,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Gripper cylinder OPEN,Greifer OEFFNEN,pistone pinza siringhe aperta
+YV318,Q 125.7,A     125.7,DO,BOOL,Slot 2: CPU 313C Onboard DI24/DO16 (124..126),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Gripper cylinder CLOSE,Greifer SCHLIESSEN,pistone pinza siringhe chiusa
+YV361,Q 4.0,A       4.0,DO,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Guide cylinder UP valve,Fuehrung auf Ventil,pistone guida estreazione siringhe alto
+YV362,Q 4.1,A       4.1,DO,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Guide cylinder DOWN valve,Fuehrung ab Ventil,pistone guida estreazione siringhe basso
+YV363,Q 4.2,A       4.2,DO,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Guide pusher ADVANCE valve,Schieber vor Ventil,pistone guida estreazione siringhe avanti
+YV364,Q 4.3,A       4.3,DO,BOOL,Slot 5: SM 323 DI16/DO16x24V (4..5),Solenoid Valves (Lifter / Positioner / Gripper / Guide),Guide pusher RETRACT valve,Schieber zurueck Ventil,pistone guida estreazione siringhe indietro
+SQ331,I 1.0,E       1.0,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,X-Axis at Pick / Nest pos,X-Achse Nestposition,asse siringhe X al carico
+SQ332,I 1.1,E       1.1,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,X-Axis at Pre-Pick pos,X-Achse Vor-Aufnahme,asse siringhe X al pre-carico
+SQ333,I 1.2,E       1.2,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,X-Axis at Pre-Discharge pos,X-Achse Vor-Abgabe,asse siringhe X al pre-scarico
+SQ334,I 1.3,E       1.3,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,X-Axis at Discharge pos,X-Achse Abgabepos.,asse siringhe X allo scarico
+SQ335,I 1.4,E       1.4,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,Y-Axis LOW position,Y-Achse UNTEN,asse siringhe Y basso
+SQ336,I 1.5,E       1.5,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,Y-Axis Pre-Low position,Y-Achse Vor-Unten,asse siringhe Y pre-basso
+SQ337,I 1.6,E       1.6,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,Y-Axis Pre-High position,Y-Achse Vor-Oben,asse siringhe Y pre-alto
+SQ338,I 1.7,E       1.7,DI,BOOL,Slot 4: SM 321 DI16xDC24V (0..1),X/Y Axis Position Sensors,Y-Axis HIGH position,Y-Achse OBEN,asse siringhe Y alto
+YV263,PQW 752,PAW   752,AO Output,WORD,Slot 2: CPU 313C Onboard AI5/AO2 (752..755),X/Y Proportional Pneumatic Axes,X-Axis proportional valve,Proportionalventil X-Achse,Valvola analogica asse X
+YV266,PQW 754,PAW   754,AO Output,WORD,Slot 2: CPU 313C Onboard AI5/AO2 (752..755),X/Y Proportional Pneumatic Axes,Y-Axis proportional valve,Proportionalventil Y-Achse,Valvola analogica asse Y

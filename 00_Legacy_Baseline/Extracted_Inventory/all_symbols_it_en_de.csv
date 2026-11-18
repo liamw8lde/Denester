@@ -1,0 +1,363 @@
+symbol,step7_address,iec_address,data_type,description_en,description_de,description_it_2016_backup
+HL303,A     124.2,Q 124.2,BOOL,Beacon lamp ORANGE,Signalsaeule ORANGE,lampada colonna ARANCIO
+HL304,A     124.3,Q 124.3,BOOL,Beacon lamp RED,Signalsaeule ROT,lampada colonna ROSSA
+HMI,DB    106,DB 106,DB    106,HMI interface data,HMI Schnittstellendaten,Dati interfaccia
+J291,E     125.0,I 125.0,BOOL,Downstream machine ready,Nachfolgemoschine bereit,abilitazione da macchina a valle
+LAMPADA_COLONNA,FC    104,FC 104,FC    104,Beacon lamp control,Signalsaeulen-Steuerung,gestione lampada a colonna
+LAVORO,DB    100,DB 100,DB    100,Machine production data,Maschinen-Betriebsdaten,Dati macchina in lavoro
+MAIN,OB      1,OB 1,OB      1,General routine / Main loop,Hauptprogramm Allgemein,gestione generale
+MASTER_RESET,FC    105,FC 105,FC    105,Master reset control,Master-Reset Steuerung,gestione master reset
+MERKER,DB    105,DB 105,DB    105,Merker flag data,Merker-Daten,Dati merker
+MOT_NEST,FC     99,FC 99,FC     99,Nest conveyor motor control,Nest-Transportband Motor,motore nastro trasporto nest
+MOV_ASSE,FB     11,FB 11,FB     11,Pneumatic axis movement control,Pneumatikachse Bewegung,gestione movimento asse pneumatico
+MOV_PISTONE,FC     11,FC 11,FC     11,Piston movement control,Zylinderbewegung Steuerung,gestione movimento pistone
+Message,M     234.2,M 234.2,BOOL,Active messages flag,Meldungen aktiv Flag,messaggi
+Moving,M      20.3,M 20.3,BOOL,Conveyor motor running,Bandmotor laeuft,motore nastro in movimento
+NotUsed,M     255.6,M 255.6,BOOL,Unused spare bit,Unbenutztes Bit (Reserve),bit di non usato
+PISTONI,FC    102,FC 102,FC    102,Valve outputs control,Ventilausgaenge Steuerung,gestione uscite fisiche valvole piestoni
+war82,M     228.1,M 228.1,BOOL,Warning 082,Warnung 082,082
+war83,M     228.2,M 228.2,BOOL,Warning 083,Warnung 083,083
+war84,M     228.3,M 228.3,BOOL,Warning 084,Warnung 084,084
+war85,M     228.4,M 228.4,BOOL,Warning 085,Warnung 085,085
+war86,M     228.5,M 228.5,BOOL,Warning 086,Warnung 086,086
+war87,M     228.6,M 228.6,BOOL,Warning 087,Warnung 087,087
+war88,M     228.7,M 228.7,BOOL,Warning 088,Warnung 088,088
+war89,M     229.0,M 229.0,BOOL,Warning 089,Warnung 089,089
+war90,M     229.1,M 229.1,BOOL,Warning 090,Warnung 090,090
+war91,M     229.2,M 229.2,BOOL,Warning 091,Warnung 091,091
+war92,M     229.3,M 229.3,BOOL,Warning 092,Warnung 092,092
+war93,M     229.4,M 229.4,BOOL,Warning 093,Warnung 093,093
+war94,M     229.5,M 229.5,BOOL,Warning 094,Warnung 094,094
+war95,M     229.6,M 229.6,BOOL,Warning 095,Warnung 095,095
+war96,M     229.7,M 229.7,BOOL,Warning 096,Warnung 096,096
+CmdPosiz,M       7.1,M 7.1,BOOL,Positioner cylinder command,Befehl Positionierer,comando posizionatore siringhe
+CmdSolle,M       7.2,M 7.2,BOOL,Lifter cylinder command,Befehl Heber,comando sollevatore
+DATI_ASSE_X,DB     20,DB 20,FB     11,X-Axis parameters/data,X-Achse Daten,Dati asse X
+DATI_ASSE_Y,DB     21,DB 21,FB     11,Y-Axis parameters/data,Y-Achse Daten,Dati asse Y
+DATI_ENCODER,DB     90,DB 90,SFB    47,Machine encoder data,Maschinen-Encoderdaten,Dati encoder macchina
+DATI_NEST100_1,DB     10,DB 10,FB     50,100-nest recipe data (1 clamp),Rezeptdaten 100er Nest,Dati nest da 100 con 1 pinza
+DATI_NEST160_1,DB     11,DB 11,FB     50,160-nest recipe data (1 clamp),Rezeptdaten 160er Nest,Dati nest da 160 con 1 pinza
+DATI_NEST64_1,DB     12,DB 12,FB     50,64-nest recipe data (1 clamp),Rezeptdaten 64er Nest,Dati nest da 64 con 1 pinza
+DRV_RST,A     124.7,Q 124.7,BOOL,Reset all inverters,Inverter-Reset,reset inverters
+Dispari,M      20.2,M 20.2,BOOL,Nest pitch step,Nest-Schritt,passo nest
+ESTESO,M     255.3,M 255.3,BOOL,Always ON flag,Dauer-EIN Merker,sempre ON
+EnbSolle>Trasfe,M       0.2,M 0.2,BOOL,Permissive Lifter -> Transfer,Freigabe Heber -> Umsetzer,flag abilitazione da sollevamento a trasferimento
+EnbTrasfe>Solle,M       0.1,M 0.1,BOOL,Permissive Transfer -> Lifter,Freigabe Umsetzer -> Heber,flag abilitazione da trasferimento a sollevamento
+Fase,M      19.7,M 19.7,BOOL,Stop phase reached,Stopp-Phase erreicht,fase arresto raggiunta
+FstScn,M     255.0,M 255.0,BOOL,Flag prima scansione,Flag prima scansione,Flag prima scansione
+HL302,A     124.1,Q 124.1,BOOL,Beacon lamp GREEN,Signalsaeule GRUEN,lampada colonna VERDE
+war66,M     226.1,M 226.1,BOOL,Warning 066,Warnung 066,066
+war67,M     226.2,M 226.2,BOOL,Warning 067,Warnung 067,067
+war68,M     226.3,M 226.3,BOOL,Warning 068,Warnung 068,068
+war69,M     226.4,M 226.4,BOOL,Warning 069,Warnung 069,069
+war70,M     226.5,M 226.5,BOOL,Warning 070,Warnung 070,070
+war71,M     226.6,M 226.6,BOOL,Warning 071,Warnung 071,071
+war72,M     226.7,M 226.7,BOOL,Warning 072,Warnung 072,072
+war73,M     227.0,M 227.0,BOOL,Warning 073,Warnung 073,073
+war74,M     227.1,M 227.1,BOOL,Warning 074,Warnung 074,074
+war75,M     227.2,M 227.2,BOOL,Warning 075,Warnung 075,075
+war76,M     227.3,M 227.3,BOOL,Warning 076,Warnung 076,076
+war77,M     227.4,M 227.4,BOOL,Warning 077,Warnung 077,077
+war78,M     227.5,M 227.5,BOOL,Warning 078,Warnung 078,078
+war79,M     227.6,M 227.6,BOOL,Warning 079,Warnung 079,079
+war80,M     227.7,M 227.7,BOOL,Warning 080,Warnung 080,080
+war81,M     228.0,M 228.0,BOOL,Warning 081,Warnung 081,081
+BQ281_A,E     124.0,I 124.0,BOOL,Encoder track A,Encoder Spur A,encoder A
+BQ281_B,E     124.1,I 124.1,BOOL,Encoder track B,Encoder Spur B,encoder B
+BQ281_COUNT,PED   768,PID 768,DWORD,gradi encoder,gradi encoder,gradi encoder
+BQ281_RD,E     124.3,I 124.3,BOOL,Encoder READY,Encoder BEREIT,encoder READY
+BQ281_RESERVED,E     125.4,I 125.4,BOOL,Reserved encoder count,Reserve Encoder-Zaehlung,riservato conteggio encoder
+BQ281_RST,A     124.5,Q 124.5,BOOL,Reset encoder,Encoder-Reset,reset encoder
+BQ281_Z,E     124.2,I 124.2,BOOL,Encoder index Z,Encoder Nullimpuls Z,encoder Z
+BatFault,M     255.5,M 255.5,BOOL,PLC battery low,PLC Pufferbatterie leer,batteria PLC scarica
+CALCOLO_PASSO,FB     50,FB 50,FB     50,Format pitch calculation,Schritt-Berechnung Format,calcolo passo in funzione del formato
+CONTAPEZZI,FC    101,FC 101,FC    101,HMI terminal interface,Bedienterminal-Schnittstelle,gestione interfaccia terminale
+COUNT,SFB    47,SFB 47,SFB    47,Common counter module,Zaehlermodul,Common counter module
+ChangPar,M     234.6,M 234.6,BOOL,cambio parametri in corso,cambio parametri in corso,cambio parametri in corso
+CmdAsseX,M       7.4,M 7.4,BOOL,X-Axis movement command,Befehl X-Achse,comando asse X
+CmdAsseY,M       7.5,M 7.5,BOOL,Y-Axis movement command,Befehl Y-Achse,comando asse Y
+CmdPasso,M       7.0,M 7.0,BOOL,Nest belt step command,Befehl Nestband-Schritt,comando passo nastro nest
+CmdPinza,M       7.3,M 7.3,BOOL,Gripper clamp command,Befehl Greifer,comando pinza
+war50,M     224.1,M 224.1,BOOL,Warning 050,Warnung 050,050
+war51,M     224.2,M 224.2,BOOL,Warning 051,Warnung 051,051
+war52,M     224.3,M 224.3,BOOL,Warning 052,Warnung 052,052
+war53,M     224.4,M 224.4,BOOL,Warning 053,Warnung 053,053
+war54,M     224.5,M 224.5,BOOL,Warning 054,Warnung 054,054
+war55,M     224.6,M 224.6,BOOL,Warning 055,Warnung 055,055
+war56,M     224.7,M 224.7,BOOL,Warning 056,Warnung 056,056
+war57,M     225.0,M 225.0,BOOL,Warning 057,Warnung 057,057
+war58,M     225.1,M 225.1,BOOL,Warning 058,Warnung 058,058
+war59,M     225.2,M 225.2,BOOL,Warning 059,Warnung 059,059
+war60,M     225.3,M 225.3,BOOL,Warning 060,Warnung 060,060
+war61,M     225.4,M 225.4,BOOL,Warning 061,Warnung 061,061
+war62,M     225.5,M 225.5,BOOL,Warning 062,Warnung 062,062
+war63,M     225.6,M 225.6,BOOL,Warning 063,Warnung 063,063
+war64,M     225.7,M 225.7,BOOL,Warning 064,Warnung 064,064
+war65,M     226.0,M 226.0,BOOL,Warning 065,Warnung 065,065
+@B283,M      20.5,M 20.5,BOOL,Test phase auxiliary flag,Hilfsmerker Pruefphase,appoggio fase controllo
+@Fase,M      20.0,M 20.0,BOOL,Phase pulse auxiliary flag,Hilfsmerker Phasenimpuls,flag appoggio impulso fase
+@Pezzi,M     240.0,M 240.0,BOOL,Part counter auxiliary flag,Hilfsmerker Stueckzaehler,appoggio impulso contapezzi
+@Pinza,M      21.4,M 21.4,BOOL,Gripper command aux flag,Hilfsmerker Greiferbefehl,appoggio comando pinza
+@Start,M     236.0,M 236.0,BOOL,Start pulse auxiliary flag,Hilfsmerker Start-Impuls,appoggio impulso start
+@Stop,M     236.1,M 236.1,BOOL,Stop pulse auxiliary flag,Hilfsmerker Stopp-Impuls,appoggio impulso stop
+@Tempo,M     236.5,M 236.5,BOOL,Timer auxiliary flag,Hilfsmerker Zeitzzaehlung,appoggio conteggio tempo
+AVVIAMENTO,OB    100,OB 100,OB    100,Startup routine (Power on),Anlaufprogramm / Neustart,gestione accensione macchina
+Alarm,M     234.0,M 234.0,BOOL,Alarms active flag,Alarme anstehend Merker,allarmi in corso
+AlwOff,M     255.2,M 255.2,BOOL,Always OFF flag,Dauer-AUS Merker,Flag sempre OFF
+AlwOn,M     255.1,M 255.1,BOOL,Always ON flag,Dauer-EIN Merker,Flag sempre ON
+B293,E     125.2,I 125.2,BOOL,Outfeed max level,Auslaufstau maximal,Scarico massimo uscita
+B321,E       0.0,I 0.0,BOOL,Nest not seated on belt,Nest nicht pos. auf Band,nest non posizionato su nastro
+B322,E       0.1,I 0.1,BOOL,Syringes discharge complete,Spritzen entleert,avvenuto scarico siringhe
+B323,E       0.2,I 0.2,BOOL,Nest present sensor,Nest vorhanden Sensor,presenza nest
+mes128,M     233.7,M 233.7,BOOL,Message 128,Meldung 128,128
+mes97,M     230.0,M 230.0,BOOL,MINIMUM INFEED LEVEL,MINIMALER ZULAUF,CARICO MINIMO
+mes98,M     230.1,M 230.1,BOOL,MAXIMUM OUTFEED FULL,MAXIMALER AUSLAUF,SCARICO MASSIMO
+mes99,M     230.2,M 230.2,BOOL,NO DOWNSTREAM PERMISSIVE,KEINE NACHFOLGE-FREIGABE,ASSENZA ABILITAZIONE DA VALLE
+step0,MW    180,MW 180,WORD,Sequence 0 step word,Schrittwort Sequenz 0,passi sequenza 0
+step1,MW    182,MW 182,WORD,Sequence 1 step word,Schrittwort Sequenz 1,passi sequenza 1
+step2,MW    184,MW 184,WORD,Sequence 2 step word,Schrittwort Sequenz 2,passi sequenza 2
+step3,MW    186,MW 186,WORD,Sequence 3 step word,Schrittwort Sequenz 3,passi sequenza 3
+step4,MW    188,MW 188,WORD,Sequence 4 step word,Schrittwort Sequenz 4,passi sequenza 4
+step5,MW    190,MW 190,WORD,Sequence 5 step word,Schrittwort Sequenz 5,passi sequenza 5
+step6,MW    192,MW 192,WORD,Sequence 6 step word,Schrittwort Sequenz 6,passi sequenza 6
+step7,MW    194,MW 194,WORD,Sequence 7 step word,Schrittwort Sequenz 7,passi sequenza 7
+step8,MW    196,MW 196,WORD,Sequence 8 step word,Schrittwort Sequenz 8,passi sequenza 8
+step9,MW    198,MW 198,WORD,Sequence 9 step word,Schrittwort Sequenz 9,passi sequenza 9
+w_stato,MW    200,MW 200,WORD,Machine status word,Maschinen-Statuswort,word di stato
+war49,M     224.0,M 224.0,BOOL,NEST NOT SEATED,NEST NICHT POSITIONIERT,NEST NON POSIZIONATO
+mes112,M     231.7,M 231.7,BOOL,Message 112,Meldung 112,112
+mes113,M     232.0,M 232.0,BOOL,Message 113,Meldung 113,113
+mes114,M     232.1,M 232.1,BOOL,Message 114,Meldung 114,114
+mes115,M     232.2,M 232.2,BOOL,Message 115,Meldung 115,115
+mes116,M     232.3,M 232.3,BOOL,Message 116,Meldung 116,116
+mes117,M     232.4,M 232.4,BOOL,Message 117,Meldung 117,117
+mes118,M     232.5,M 232.5,BOOL,Message 118,Meldung 118,118
+mes119,M     232.6,M 232.6,BOOL,Message 119,Meldung 119,119
+mes120,M     232.7,M 232.7,BOOL,Message 120,Meldung 120,120
+mes121,M     233.0,M 233.0,BOOL,Message 121,Meldung 121,121
+mes122,M     233.1,M 233.1,BOOL,Message 122,Meldung 122,122
+mes123,M     233.2,M 233.2,BOOL,Message 123,Meldung 123,123
+mes124,M     233.3,M 233.3,BOOL,Message 124,Meldung 124,124
+mes125,M     233.4,M 233.4,BOOL,Message 125,Meldung 125,125
+mes126,M     233.5,M 233.5,BOOL,Message 126,Meldung 126,126
+mes127,M     233.6,M 233.6,BOOL,Message 127,Meldung 127,127
+alr6,M     218.5,M 218.5,BOOL,Alarm 006,Stoerung 006,006
+alr7,M     218.6,M 218.6,BOOL,GUARD DOORS OPEN,SCHUTZTUEREN OFFEN,PROTEZIONI APERTE
+alr8,M     218.7,M 218.7,BOOL,CABINET THERMAL OVERLOAD,SCHALTSCHRANK MOTORSCHUTZ,TERMICI QUADRO
+alr9,M     219.0,M 219.0,BOOL,ENCODER FAULT,ENCODER STOERUNG,ANOMALIA ENCODER
+mes100,M     230.3,M 230.3,BOOL,JOG BUTTON ENGAGED,TIPP-TASTER BETAETIGT,PULSANTE MARCIA AD IMPULSI INSERITO
+mes101,M     230.4,M 230.4,BOOL,RUNNING WITH DEFAULT DATA,BETRIEB MIT STANDARDDATEN,FUNZIONAMENTO CON DATI STANDARD
+mes102,M     230.5,M 230.5,BOOL,NEST OUTFEED FULL,NEST-AUSLAUF VOLL,SCARICO MASSIMO NEST
+mes103,M     230.6,M 230.6,BOOL,PERIODIC MAINTENANCE DUE,WARTUNG ERFORDERLICH,MANUTENZIONE PERIODICA
+mes104,M     230.7,M 230.7,BOOL,MACHINE STOPPED / STANDBY,MASCHINE IM STOPP,MACCHINA IN ARRESTO
+mes105,M     231.0,M 231.0,BOOL,MACHINE IN AUTOMATIC,MASCHINE IN AUTOMATIK,MACCHINA IN AUTOMATICO
+mes106,M     231.1,M 231.1,BOOL,Message 106,Meldung 106,106
+mes107,M     231.2,M 231.2,BOOL,Message 107,Meldung 107,107
+mes108,M     231.3,M 231.3,BOOL,Message 108,Meldung 108,108
+mes109,M     231.4,M 231.4,BOOL,MAINS POWER LOSS,NETZSPANNUNG FEHLT,MANCANZA TENSIONE DI RETE
+mes110,M     231.5,M 231.5,BOOL,Message 110,Meldung 110,110
+mes111,M     231.6,M 231.6,BOOL,Message 111,Meldung 111,111
+alr35,M     222.2,M 222.2,BOOL,Alarm 035,Stoerung 035,035
+alr36,M     222.3,M 222.3,BOOL,Alarm 036,Stoerung 036,036
+alr37,M     222.4,M 222.4,BOOL,Alarm 037,Stoerung 037,037
+alr38,M     222.5,M 222.5,BOOL,Alarm 038,Stoerung 038,038
+alr39,M     222.6,M 222.6,BOOL,Alarm 039,Stoerung 039,039
+alr4,M     218.3,M 218.3,BOOL,GUARD DOOR 2 OPEN,SCHUTZTUER 2 OFFEN,PROTEZIONE 2 APERTA
+alr40,M     222.7,M 222.7,BOOL,Alarm 040,Stoerung 040,040
+alr41,M     223.0,M 223.0,BOOL,Alarm 041,Stoerung 041,041
+alr42,M     223.1,M 223.1,BOOL,Alarm 042,Stoerung 042,042
+alr43,M     223.2,M 223.2,BOOL,Alarm 043,Stoerung 043,043
+alr44,M     223.3,M 223.3,BOOL,Alarm 044,Stoerung 044,044
+alr45,M     223.4,M 223.4,BOOL,Alarm 045,Stoerung 045,045
+alr46,M     223.5,M 223.5,BOOL,Alarm 046,Stoerung 046,046
+alr47,M     223.6,M 223.6,BOOL,Alarm 047,Stoerung 047,047
+alr48,M     223.7,M 223.7,BOOL,Alarm 048,Stoerung 048,048
+alr5,M     218.4,M 218.4,BOOL,LOW AIR PRESSURE,DRUCKLUFT ZU NIEDRIG,BASSA PRESSIONE ARIA
+alr20,M     220.3,M 220.3,BOOL,POSITIONER NOT RETRACTED,POSITIONIERER NICHT ZURUECK,POSIZIONATORE SIRINGHE NON RETRATTO
+alr21,M     220.4,M 220.4,BOOL,X-AXIS NOT ADVANCED,X-ACHSE NICHT AUSGEFAHREN,ASSE X SIRINGHE NON ESTESO
+alr22,M     220.5,M 220.5,BOOL,X-AXIS NOT RETRACTED,X-ACHSE NICHT EINGEFAHREN,ASSE X SIRINGHE NON RETRATTO
+alr23,M     220.6,M 220.6,BOOL,Y-AXIS NOT DOWN,Y-ACHSE NICHT UNTEN,ASSE Y SIRINGHE NON ESTESO
+alr24,M     220.7,M 220.7,BOOL,Y-AXIS NOT UP,Y-ACHSE NICHT OBEN,ASSE Y SIRINGHE NON RETRATTO
+alr25,M     221.0,M 221.0,BOOL,DISCHARGE NOT COMPLETED,ABGABE NICHT AUSGEFUEHRT,SCARICO SIRINGHE NON ESEGUITO
+alr26,M     221.1,M 221.1,BOOL,BELT UNLOCKED,TRANSPORTBAND ENTRIEGELT,SBLOCCO NASTRO
+alr27,M     221.2,M 221.2,BOOL,Alarm 027,Stoerung 027,027
+alr28,M     221.3,M 221.3,BOOL,Alarm 028,Stoerung 028,028
+alr29,M     221.4,M 221.4,BOOL,Alarm 029,Stoerung 029,029
+alr3,M     218.2,M 218.2,BOOL,GUARD DOOR 1 OPEN,SCHUTZTUER 1 OFFEN,PROTEZIONE 1 APERTA
+alr30,M     221.5,M 221.5,BOOL,Alarm 030,Stoerung 030,030
+alr31,M     221.6,M 221.6,BOOL,Alarm 031,Stoerung 031,031
+alr32,M     221.7,M 221.7,BOOL,Alarm 032,Stoerung 032,032
+alr33,M     222.0,M 222.0,BOOL,Alarm 033,Stoerung 033,033
+alr34,M     222.1,M 222.1,BOOL,Alarm 034,Stoerung 034,034
+^FaseChkNast,M      21.3,M 21.3,BOOL,Belt inspection phase,Band-Pruefphase,fase controllo nastro
+^Pinza,M      21.5,M 21.5,BOOL,Gripper command pulse,Impuls Greiferbefehl,impulso comando pinza
+^Start,M     238.0,M 238.0,BOOL,Start pulse,Start-Impuls,impulso start
+^Stop,M     238.1,M 238.1,BOOL,Stop pulse,Stopp-Impuls,impulso stop
+alr1,M     218.0,M 218.0,BOOL,SAFETY RELAY FAULT,SICHERHEITSRELAIS AUSGELOEST,MODULO DI SICUREZZA
+alr10,M     219.1,M 219.1,BOOL,INFEED BELT INVERTER FAULT,INVERTER ZULAUFBAND FEHLER,INVERTER NASTRO CARICO
+alr11,M     219.2,M 219.2,BOOL,CONNECTING BELT INVERTER FAULT,INVERTER VERB.BAND FEHLER,INVERTER NASTRO COLLEGAMENTO
+alr12,M     219.3,M 219.3,BOOL,Alarm 012,Stoerung 012,012
+alr13,M     219.4,M 219.4,BOOL,EXTRACTION GUIDE NOT UP,FUEHRUNG NICHT OBEN,GUIDA ESTRAZIONE SIRINGHE NON ALTA
+alr14,M     219.5,M 219.5,BOOL,EXTRACTION GUIDE NOT DOWN,FUEHRUNG NICHT UNTEN,GUIDA ESTRAZIONE SIRINGHE NON BASSA
+alr15,M     219.6,M 219.6,BOOL,EXTRACTION GUIDE NOT FWD,SCHIEBER NICHT VORN,GUIDA ESTRAZIONE SIRINGHE NON AVANTI
+alr16,M     219.7,M 219.7,BOOL,EXTRACTION GUIDE NOT BACK,SCHIEBER NICHT HINTEN,GUIDA ESTRAZIONE SIRINGHE NON INDIETRO
+alr17,M     220.0,M 220.0,BOOL,LIFTER NOT UP,HEBER NICHT OBEN,SOLLEVATORE SIRINGHE NON ESTESO
+alr18,M     220.1,M 220.1,BOOL,LIFTER NOT DOWN,HEBER NICHT UNTEN,SOLLEVATORE SIRINGHE NON RETRATTO
+alr19,M     220.2,M 220.2,BOOL,POSITIONER NOT ADVANCED,POSITIONIERER NICHT VORN,POSIZIONATORE SIRINGHE NON ESTESO
+alr2,M     218.1,M 218.1,BOOL,EMERGENCY STOP PRESSED,NOT-HALT BETAETIGT,PULSANTE EMERGENZA CONSOLLE
+Wmessage8,MW    232,MW 232,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Wwarning4,MW    224,MW 224,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Wwarning5,MW    226,MW 226,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Wwarning6,MW    228,MW 228,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+YV263,PAW   752,PQW 752,WORD,X-Axis proportional valve,Proportionalventil X-Achse,Valvola analogica asse X
+YV266,PAW   754,PQW 754,WORD,Y-Axis proportional valve,Proportionalventil Y-Achse,Valvola analogica asse Y
+YV311,A     125.0,Q 125.0,BOOL,Vertical axis brake valve,Bremse Vertikalachse,valvola blocco asse verticale
+YV313,A     125.2,Q 125.2,BOOL,Lifter cylinder RETRACT,Heber zurueck / UNTEN,pistone sollevatore siringhe retratto
+YV314,A     125.3,Q 125.3,BOOL,Lifter cylinder EXTEND,Heber vor / OBEN,pistone sollevatore siringhe esteso
+YV315,A     125.4,Q 125.4,BOOL,Positioner cylinder RETRACT,Positionierer zurueck,pistone posizionatore siringhe retratto
+YV316,A     125.5,Q 125.5,BOOL,Positioner cylinder ADVANCE,Positionierer vor,pistone posizionatore siringhe esteso
+YV317,A     125.6,Q 125.6,BOOL,Gripper cylinder OPEN,Greifer OEFFNEN,pistone pinza siringhe aperta
+YV318,A     125.7,Q 125.7,BOOL,Gripper cylinder CLOSE,Greifer SCHLIESSEN,pistone pinza siringhe chiusa
+ZeroEncoder,M      21.0,M 21.0,BOOL,Encoder homing zero phase,Encoder-Nullpunktphase,fase zero encoder
+^B283,M      20.4,M 20.4,BOOL,Test phase pulse,Impuls Pruefphase,impulso fase controllo
+^Fase,M      20.1,M 20.1,BOOL,Phase step pulse,Phasen-Schrittimpuls,flag impulso fase
+TimSicurezza,T       7,T 7,TIMER,Pre-warning delay timer,Vorwarnung-Verzoegerungstimer,timer ritardo inserzione preventa
+TimSosta,T       6,T 6,TIMER,Nest step dwell timer,Verweilzeit Nestschritt,timer sosta passo nest
+TimSostaX,T      19,T 19,TIMER,X-Axis dwell timer,Verweilzeit X-Achse,timer sosta asse x
+TimSostaY,T      20,T 20,TIMER,Y-Axis dwell timer,Verweilzeit Y-Achse,timer sosta asse y
+TimTest,T       2,T 2,TIMER,Lamp test timer,Lampentest-Timer,timer test lampade
+TimVelo,T      17,T 17,TIMER,Speed calculation timer,Timer Geschwindigkeitsberechn.,timer calcolo velocita
+UE142_OK,E     125.6,I 125.6,BOOL,Safety relay OK,Sicherheitsrelais OK,modulo di sicurezza OK
+UE71_OK,E     125.5,I 125.5,BOOL,Nest belt inverter OK,Inverter Nestband OK,inverter nastro nest OK
+UE71_RUN,A     124.6,Q 124.6,BOOL,Nest belt inverter RUN,Inverter Nestband EIN,marcia inverter nastro nest
+UE76_OK,E     125.3,I 125.3,BOOL,Infeed belt inverter OK,Inverter Verb.band OK,invertre nastro collegamento OK
+UE76_RUN,A     125.1,Q 125.1,BOOL,Infeed belt inverter RUN,Inverter Verb.band EIN,marcia inverter nastro di collegamento
+Walarm1,MW    218,MW 218,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Walarm2,MW    220,MW 220,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Walarm3,MW    222,MW 222,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+Warning,M     234.1,M 234.1,BOOL,Warnings active flag,Warnungen anstehend Merker,warning in corso
+Wmessage7,MW    230,MW 230,WORD,Alarm status word,Alarm-Statuswort,word allarmi
+TimAttesaPasso,T      16,T 16,TIMER,Belt wait timer after pick,Band-Wartezeit nach Abholung,timer attesa passo nastro dopo prelievo
+TimChiude,T       5,T 5,TIMER,Gripper close timer,Timer Greifer schliessen,timer pinza chiusa
+TimEnc,T     110,T 110,TIMER,Encoder enable timer,Timer Encoder-Freigabe,timer abilitazione encoder
+TimEncoder,T       1,T 1,TIMER,Encoder fault timer,Timer Encoder-Stoerung,timer avaria ancoder
+TimForzaStop,T       8,T 8,TIMER,Stop force timer,Timer Stopp-Erzwingung,timer per forzaggio fase di stop
+TimOut1,T      10,T 10,TIMER,Lifter movement timeout,Timeout Spritzenheber,time-out sollevatore
+TimOut2,T      11,T 11,TIMER,Lifter movement timeout,Timeout Spritzenheber,time-out sollevatore
+TimOut3,T      12,T 12,TIMER,Positioner movement timeout,Timeout Positionierer,time-out posizionatore
+TimOut4,T      13,T 13,TIMER,Positioner movement timeout,Timeout Positionierer,time-out posizionatore
+TimOut9,T      28,T 28,TIMER,Phase sequence timeout,Timeout Ablaufphase,time_out fase
+TimScaMax1,T      24,T 24,TIMER,Outfeed max timer 1,Timer Auslaufstau max 1,timer scarico massimo 1
+TimScaMax2,T      26,T 26,TIMER,Outfeed max timer 2,Timer Auslaufstau max 2,timer scarico massimo 2
+TimScaMaxNasOFF,T      15,T 15,TIMER,Outfeed conveyor max OFF timer,Timer Auslaufband voll AUS,timer scarico massimo nastro scarico OFF
+TimScaMaxNasON,T      14,T 14,TIMER,Outfeed conveyor max ON timer,Timer Auslaufband voll EIN,timer scarico massimo nastro scarico ON
+TimScaMin1,T      25,T 25,TIMER,Outfeed min timer 1,Timer Auslaufstau min 1,timer scarico minimo 1
+TimScaMin2,T      27,T 27,TIMER,Outfeed min timer 2,Timer Auslaufstau min 2,timer scarico minimo 2
+StopSeq3,M     179.2,M 179.2,BOOL,Stop sequence 3,Stopp Sequenz 3,
+StopSeq4,M     179.3,M 179.3,BOOL,Stop sequence 4,Stopp Sequenz 4,
+SuonoContinuo,M     240.2,M 240.2,BOOL,Continuous buzzer sound,Dauerton Hupe,suono continuo segnalazione acustica
+SuonoSingolo,M     240.3,M 240.3,BOOL,Single beep buzzer,Einzelton Hupe,suono singolo segnalazione acustica
+TIMHMI.T127,T     127,T 127,TIMER,TP170 Spare timer,TP170 Reserve-Timer,TP170 Timer riserva
+TIMHMI.TDSOUT_0,T     124,T 124,TIMER,TP170 Watchdog PLC/HMI comm,TP170 PLC/HMI Verbindungstimer,TP170 Timer servizio controllo collegamento PLC / OP
+TIMHMI.TDSOUT_1,T     125,T 125,TIMER,TP170 Watchdog PLC/HMI comm,TP170 PLC/HMI Verbindungstimer,TP170 Timer servizio controllo collegamento PLC / OP
+TIMHMI.TIMER_1_SECONDO,T     123,T 123,TIMER,TP170 1-second timebase,TP170 1-Sekunde Takt-Timer,TP170 Timer base tempi 1 secondo
+TIMHMI.TIMER_AVVISO,T     122,T 122,TIMER,TP170 Alarm banner display timer,TP170 Meldedauer-Timer,TP170 Timer durata segnalazione avvisi
+TIMHMI.TIMER_FLASH,T     120,T 120,TIMER,TP170 Flashing service timer,TP170 Blinktakt-Timer,TP170 Timer servizio lampeggi
+TIMHMI.TIMER_PASSWORD,T     126,T 126,TIMER,TP170 Password timeout timer,TP170 Passwort-Ablauftimer,TP170 Timer tempo di attivazione password
+TIMHMI.TSTART_OP,T     121,T 121,TIMER,TP170 HMI startup timer,TP170 HMI Anlauftimer,TP170 Timer avviamento OP
+TestLampade,M     236.4,M 236.4,BOOL,Lamp test auxiliary flag,Hilfsmerker Lampentest,appoggio test lampade
+Tim1min,T       3,T 3,TIMER,1-minute timebase timer,1-Minute Zeittakt-Timer,timer base tempi 1 minuto
+TimApre,T       4,T 4,TIMER,Gripper open timer,Timer Greifer oeffnen,timer pinza aperta
+TimAria,T      23,T 23,TIMER,Air supply ON delay timer,Druckluft-Einschaltverzoeg.,timer inserzione aria
+StatoManuale,M     200.2,M 200.2,BOOL,Selector switch MANUAL,Wahlschalter HAND,stato manuale selettore
+StatoRun,M     200.0,M 200.0,BOOL,Machine RUN state,Maschine in BETRIEB,stato marcia macchina
+StatoStop,M     200.4,M 200.4,BOOL,Machine STOP state,Maschine in STOPP,stato stop
+StatoSvuota,M     200.3,M 200.3,BOOL,Purge/Empty cycle state,Maschine in LEERFAHREN,stato svoutamento
+Step.Nest0,M       4.0,M 4.0,BOOL,Rack position 0,Rack-Position 0,posizione 0 rack
+Step.Nest1,M       4.1,M 4.1,BOOL,Rack position 1,Rack-Position 1,posizione 1 rack
+Step.Nest2,M       4.2,M 4.2,BOOL,Rack position 2,Rack-Position 2,posizione 2 rack
+Step.Nest3,M       4.3,M 4.3,BOOL,Rack position 3,Rack-Position 3,posizione 3 rack
+Step.Nest4,M       4.4,M 4.4,BOOL,Rack position 4,Rack-Position 4,posizione 4 rack
+Step.Nest5,M       4.5,M 4.5,BOOL,Rack position 5,Rack-Position 5,posizione 5 rack
+Step.Nest6,M       4.6,M 4.6,BOOL,Rack position 6,Rack-Position 6,posizione 6 rack
+Step.Nest7,M       4.7,M 4.7,BOOL,Rack position 7,Rack-Position 7,posizione 7 rack
+StopOk,M     234.3,M 234.3,BOOL,Stop completed OK,Stopp ausgefuehrt,stop eseguito
+StopRequest,M     234.4,M 234.4,BOOL,Stop requested,Stopp angefordert,srop richiesto
+StopSeq1,M     179.0,M 179.0,BOOL,Stop sequence 1,Stopp Sequenz 1,
+StopSeq2,M     179.1,M 179.1,BOOL,Stop sequence 2,Stopp Sequenz 2,
+SQ327,E       0.6,I 0.6,BOOL,Positioner cylinder RETRACT,Positionierer zurueck,pistone posizionatore siringhe retratto
+SQ328,E       0.7,I 0.7,BOOL,Positioner cylinder ADVANCE,Positionierer vor,pistone posizionatore siringhe esteso
+SQ331,E       1.0,I 1.0,BOOL,X-Axis at Pick / Nest pos,X-Achse Nestposition,asse siringhe X al carico
+SQ332,E       1.1,I 1.1,BOOL,X-Axis at Pre-Pick pos,X-Achse Vor-Aufnahme,asse siringhe X al pre-carico
+SQ333,E       1.2,I 1.2,BOOL,X-Axis at Pre-Discharge pos,X-Achse Vor-Abgabe,asse siringhe X al pre-scarico
+SQ334,E       1.3,I 1.3,BOOL,X-Axis at Discharge pos,X-Achse Abgabepos.,asse siringhe X allo scarico
+SQ335,E       1.4,I 1.4,BOOL,Y-Axis LOW position,Y-Achse UNTEN,asse siringhe Y basso
+SQ336,E       1.5,I 1.5,BOOL,Y-Axis Pre-Low position,Y-Achse Vor-Unten,asse siringhe Y pre-basso
+SQ337,E       1.6,I 1.6,BOOL,Y-Axis Pre-High position,Y-Achse Vor-Oben,asse siringhe Y pre-alto
+SQ338,E       1.7,I 1.7,BOOL,Y-Axis HIGH position,Y-Achse OBEN,asse siringhe Y alto
+STATI,FC    100,FC 100,FC    100,Machine state manager,Maschinen-Zustandsverwaltung,gestione stati macchina
+SYS_TP170_M6,FC     40,FC 40,FC     40,TP170 HMI interface control,TP170 HMI Schnittstelle,gestione interfaccia TP170 Marchesini
+ScaMax1,M      20.6,M 20.6,BOOL,Outfeed max level sensor 1,Auslaufstau maximal 1,scarico massimo 1
+ScaMax2,M      20.7,M 20.7,BOOL,Outfeed max level sensor 2,Auslaufstau maximal 2,scarico massimo 2
+ScaMaxNasScar,M      21.2,M 21.2,BOOL,Outfeed conveyor max level,Austransportband voll,scarico massimo nastro scarico
+StatoAuto,M     200.1,M 200.1,BOOL,Selector switch AUTOMATIC,Wahlschalter AUTOMATIK,stato automatico selettore
+SB272,E     126.1,I 126.1,BOOL,Stop pushbutton,Stopp-Taster,pulsante di stop
+SB273,E     126.2,I 126.2,BOOL,Reset pushbutton,Reset/Quittier-Taster,pulsante di ripristino
+SB274,E     126.3,I 126.3,BOOL,Jog pushbutton,Tippbetrieb-Taster,pulsante marcia impulsi
+SB274_ON,E     126.4,I 126.4,BOOL,Jog mode engaged,Tippbetrieb aktiv,pulsante marcia impulsi inserito
+SCALING_I2W,FC     51,FC 51,FC     51,Analog scaling INT to WORD,Analogwert-Skalierung,scalatura dato scrittura analogico (INT to WORD)
+SCA_SIRINGHE,FC    108,FC 108,FC    108,Syringe discharge manager,Spritzen-Entleerung,gestione scarico siringhe
+SEQ1_SOL_SIRINGHE,FC    106,FC 106,FC    106,Seq 1: Syringe lifter,Seq 1: Spritzenheber,sequenza sollevamento siringhe
+SEQ2_TRA_SIRINGHE,FC    107,FC 107,FC    107,Seq 2: Syringe transfer head,Seq 2: Spritzenumsetzer,sequenza trasferimento sirnghe
+SEQUENCER,FC     10,FC 10,FC     10,Sequence step manager,Schrittketten-Verwaltung,sequenziatore di passi
+SET_CLK,SFC     0,SFC 0,SFC     0,Set System Clock,Systemuhr stellen,Set System Clock
+SICUREZZA,FC    103,FC 103,FC    103,Safety interlocks logic,Sicherheitsverriegelung,blocco controllo sicurezza macchina
+SP292,E     125.1,I 125.1,BOOL,Air pressure switch OK,Druckluftwaechter OK,pressostato aria
+SQ160,E     125.7,I 125.7,BOOL,Guard doors closed,Schutztueren zu,protezioni chiuse
+SQ288,E     124.7,I 124.7,BOOL,Nest belt manual unlock,Entriegelung Nestband,sblocco nastro nest
+SQ324,E       0.3,I 0.3,BOOL,Lifter cylinder UP sensor,Heber OBEN Sensor,pistone sollevamento siringhe alto
+SQ325,E       0.4,I 0.4,BOOL,Lifter cylinder DOWN sensor,Heber UNTEN Sensor,pistone sollevamento siringhe basso
+PilzOk,M     235.6,M 235.6,BOOL,Safety circuits OK (Pilz),Sicherheitskreis OK,sicurezze macchina ok
+QB281_RESERVED1,A     124.0,Q 124.0,BOOL,Reserved encoder count,Reserve Encoder-Zaehlung,riservato conteggio encoder
+READ_CLK,SFC     1,SFC 1,SFC     1,Read System Clock,Systemuhr lesen,Read System Clock
+RETRATTO,M     255.4,M 255.4,BOOL,Always OFF flag,Dauer-AUS Merker,sempre OFF
+RTC.100ms,M     254.0,M 254.0,BOOL,"Clock pulse 0,1s","Taktmerker 0,1s","base tempi 0,1 secondi"
+RTC.1_6ms,M     254.6,M 254.6,BOOL,"Clock pulse 1,6s","Taktmerker 1,6s","base tempi 1,6 secondi"
+RTC.1s,M     254.5,M 254.5,BOOL,Clock pulse 1s,Taktmerker 1s,base tempi 1 secondo
+RTC.200ms,M     254.1,M 254.1,BOOL,"Clock pulse 0,2s","Taktmerker 0,2s","base tempi 0,2 secondi"
+RTC.2s,M     254.7,M 254.7,BOOL,Clock pulse 2s,Taktmerker 2s,base tempi 2 secondi
+RTC.400ms,M     254.2,M 254.2,BOOL,"Clock pulse 0,4s","Taktmerker 0,4s","base tempi 0,4 secondi"
+RTC.500ms,M     254.3,M 254.3,BOOL,"Clock pulse 0,5s","Taktmerker 0,5s","base tempi 0,5 secondi"
+RTC.800ms,M     254.4,M 254.4,BOOL,"Clock pulse 0,8s","Taktmerker 0,8s","base tempi 0,8 secondi"
+ReadEncoder,M      21.1,M 21.1,BOOL,Enable encoder reading,Freigabe Encoder-Lesen,abilita lettura encoder
+Reset,M     238.2,M 238.2,BOOL,Reset pulse,Reset-Impuls,impulso di reset
+SB150,E     126.5,I 126.5,BOOL,Emergency stop healthy (NC),Not-Halt bereit (Ruhestrom),emergenza armata
+SB271,E     126.0,I 126.0,BOOL,Start pushbutton,Start-Taster,pulsante di start
+SQ352,E       5.1,I 5.1,BOOL,Guard cover 2 open,Schutzabdeckung 2 offen,carter 2 aperto
+SQ351,E       5.0,I 5.0,BOOL,Guard cover 1 open,Schutzabdeckung 1 offen,carter 1 aperto
+SQ344,E       4.3,I 4.3,BOOL,Guide pusher RETRACTED,Fuehrung/Schieber hinten,guida estrazione siringhe indietro
+SQ343,E       4.2,I 4.2,BOOL,Guide pusher ADVANCED,Fuehrung/Schieber vorne,guida estrazione siringhe avanti
+SQ342,E       4.1,I 4.1,BOOL,Guide cylinder DOWN,Fuehrungszylinder unten,guida estrazione siringhe bassa
+SQ341,E       4.0,I 4.0,BOOL,Guide cylinder UP,Fuehrungszylinder oben,guida estrazione siringhe alta
+YV364,A       4.3,Q 4.3,BOOL,Guide pusher RETRACT valve,Schieber zurueck Ventil,pistone guida estreazione siringhe indietro
+YV363,A       4.2,Q 4.2,BOOL,Guide pusher ADVANCE valve,Schieber vor Ventil,pistone guida estreazione siringhe avanti
+YV362,A       4.1,Q 4.1,BOOL,Guide cylinder DOWN valve,Fuehrung ab Ventil,pistone guida estreazione siringhe basso
+YV361,A       4.0,Q 4.0,BOOL,Guide cylinder UP valve,Fuehrung auf Ventil,pistone guida estreazione siringhe alto
+SEQ3_GUIDA_SIRINGHE,FC    109,FC 109,FC    109,Seq 3: Extraction guide,Seq 3: Entnahmefuehrung,sequenza guida siringhe
+EnbTrasfe>Guida,M       0.0,M 0.0,BOOL,E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub),E: Permissive Transfer -> Guide (Lift) / D: Freigabe Umsetzer -> Fuehrung (Hub),flag abilitazione da trasferimento a seq guida scarico(Sollevamento spintore)
+TimStartEstSir,T       9,T 9,TIMER,Guide pusher start timer,Starttimer Entnahmeschieber,timer start estrattore siringhe
+CmdEstSirAv,M       7.7,M 7.7,BOOL,Guide pusher forward cmd,Befehl Schieber vor,comando estrattore siringhe avanti
+CmdEstSirAl,M       7.6,M 7.6,BOOL,Guide cylinder up cmd,Befehl Fuehrung auf,comando estrattore siringhe alto
+EnbGuida>Trasfe,M       0.3,M 0.3,BOOL,Permissive Guide -> Transfer,Freigabe Fuehrung -> Umsetzer,flag abilitazione da seq guida scarico a trasferimento
+TimOut6,T      21,T 21,TIMER,Guide pusher advance timeout,Timeout Schieber vor,time-out avanzamento guida scarico
+TimOut5,T      18,T 18,TIMER,Guide cylinder lift timeout,Timeout Fuehrungszyl. auf,time-out sollevatore guida scarico
+ScaMaxNest,M      21.6,M 21.6,BOOL,Nest outfeed full,Nest-Auslauf voll,scarico massimo nest
+TimScaMaxNestOFF,T      30,T 30,TIMER,Nest outfeed max OFF timer,Timer Nestauslauf voll AUS,timer scarico massimo nest OFF
+TimScaMaxNestON,T      29,T 29,TIMER,Nest outfeed max ON timer,Timer Nestauslauf voll EIN,timer scarico massimo nest ON
+B326,E       0.5,I 0.5,BOOL,Nest outfeed full,Nest-Auslauf voll,scarico massimo nest
+EnbTrasfe>SvuotaGuida,M       0.4,M 0.4,BOOL,Permissive Transfer -> Guide (Fwd),Freigabe Umsetzer -> Fuehrung (Vor),flag abilitazione da trasferimento a seq guida scarico(avanzameto traslatore)
+@1Sec,M     114.1,M 114.1,BOOL,1-second pulse flag,1-Sekunden Taktmerker,
+Nest100,M     100.0,M 100.0,BOOL,Nest 100 format flag,Nest-Format 100 Merker,Flag nest 100
+Nest160,M     100.1,M 100.1,BOOL,Nest 160 format flag,Nest-Format 160 Merker,Flag nest 160
+Nest64,M     100.2,M 100.2,BOOL,Nest 64 format flag,Nest-Format 64 Merker,Flag nest 64
+MasterRes,M      19.0,M 19.0,BOOL,Master reset running flag,Master-Reset aktiv Merker,memoria master reset in corso
