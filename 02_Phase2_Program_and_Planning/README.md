@@ -1,23 +1,15 @@
-# Phase 2 — Programming & Detailed Planning (GAMP 5 Specification & Build Phase)
+# Phase 2 — GAMP 5 and detailed PLC/HMI replacement planning
 
-> [!NOTE]
-> **Gate Status**: **Pending Phase 1 Gate 1 Approval** (Selection of `Option 1: Controls & Safety Retrofit` vs. `Option 2: Controls + Electric Servo X/Y Upgrade`, plus completion of the Day-1 `TP170B` Flash backup checklist in [`04_Shopfloor_Walkdown_and_Backup_Checklist.md`](../01_Phase1_Feasibility_Study/04_Shopfloor_Walkdown_and_Backup_Checklist.md)).
+**Status:** Pending Phase 1 approval in principle by the Head of Production (System Owner). The PLC/HMI implementation remains subject to TrackWise, QA, design, funding and procurement approvals.
 
-## 1. Phase 2 Entry Criteria (Gate 1 Exit)
-- [ ] Signed Gate 1 Charter across **Engineering**, **VI Process Engineer**, and **System Owner**.
-- [ ] Confirmed live `TP170B Color` parameter capture (`DB20` X-axis, `DB21` Y-axis, `DB106` active gripper/discharge timers) and `ProSave` `.psb` backup.
-- [ ] Confirmed Annex 11 / 21 CFR Part 11 tier and hardwired VI validation firewall (`J291`, `B293`, `UE76`).
+**Technical owner:** OT Automation. **GMP/quality oversight:** QA. **Process requirements:** VI Process Engineering and Production. **Mechanical Engineering:** physical mounting and interfaces only if needed.
 
-## 2. Planned Phase 2 GAMP 5 Deliverables
-1. **`01_Validation_Plan_VP.md`**: GAMP 5 Category 4 validation strategy, roles, supplier assessment, and downstream VI non-impact justification.
-2. **`02_URS_User_Requirements.md`**: Bilingual (`EN / DE`) process, throughput (`64 / 100 / 160` nests), safety, alarm, and data-integrity requirements.
-3. **`03_FRS_HDS_SDS_Design_Specs.md`**:
-   - **HDS**: `S7-1512C-1 PN` (`6ES7 512-1CK01-0AB0`), `MTP700 Unified Comfort` (`6AV2128-3GB06-0AX1`), renewed dual-channel safety relay (`UE142`), and `63`-point I/O terminal mapping.
-   - **SDS**: TIA Portal V19/V20 block architecture (`OB1`, `OB100`, migrated `FB11`/`FB50`/`FC10`–`FC109`), `High_Speed_Counter` TO replacing S7-300 `SFB 47` (`BQ281`), retentive recipe DBs (`DB10`–`DB12`, `DB20`–`DB21`), and WinCC Unified `37`-screen hierarchy with RBAC & Parameter Audit Trail.
-4. **`04_Functional_Risk_Assessment_FRA.md` & `05_Traceability_Matrix_RTM.csv`**: Clause-by-clause mapping from `URS` → `FRS/HDS/SDS` → `FRA` → `FAT/SAT/IQ/OQ/PQ`.
-5. **`06_TIA_Portal_Project_and_Offline_Sim/`**: Structured SCL/LAD/Openness exports, tag tables imported from [`all_symbols_it_en_de.csv`](../00_Legacy_Baseline/Extracted_Inventory/all_symbols_it_en_de.csv), and `S7-PLCSIM Advanced` verification report.
+## Required planning deliverables
 
-## 3. Phase 2 Exit Criteria (Gate 2)
-- [ ] Approved `VP`, `URS`, `FRS/HDS/SDS`, `FRA`, and draft `RTM`.
-- [ ] Completed offline PLC/HMI simulation and internal code review (`0` legacy `FORZA_USCITE` production exposures).
-- [ ] QA pre-approved `FAT`, `SAT`, `IQ`, `OQ`, and `PQ` test protocols prior to Phase 3 execution.
+1. **TrackWise Change Control:** initiate the change, assess GMP impact and obtain site-required approvals.
+2. **GAMP 5:** validation plan / strategy, URS, functional risk assessment, hardware/software functional design requirements, traceability and test plan.
+3. **URS:** preserve required syringe nest formats, operating sequences, alarms, HMI functions, recovery procedures, safety behaviour and downstream VI handshakes.
+4. **Costing / make-or-buy:** OT capacity and effort estimate versus vendor quotations against the same URS; Procurement/Production decision with no assumed prices.
+5. **Gate 2:** URS, risk controls, proposed execution model, qualification strategy and required authorisations approved before Phase 3.
+
+See [detailed Phase 2 plan](01_GAMP5_TrackWise_URS_Make_or_Buy_2026-11-24.md). Original pre-clarification roadmap is preserved at [historical draft](README_2026-11-20_historical_draft.md) for traceability only.

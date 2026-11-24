@@ -1,3 +1,17 @@
+# Current kickoff scope — 24 November 2026 (proposed, not yet approved)
+
+The **current approval request is to replace only the Denester PLC, associated PLC I/O and HMI**. OT Automation leads all PLC/HMI technical work. The **Head of Production is the System Owner and operational risk owner**. QA is a required stakeholder for TrackWise change control and GMP/qualification decisions. VI Process Engineering defines process requirements; Mechanical Engineering supports **mechanical interfaces only**.
+
+**Phase 2**: initiate TrackWise Change Control; prepare GAMP 5 validation planning and a process-approved URS; perform the functional/GMP risk assessment; and compare **in-house OT execution versus external vendor quotations**. No project cost, outage cost or delivery-duration estimate has been approved for the kickoff presentation. Procurement, implementation and GMP release require the applicable later approvals.
+
+- [Approval presentation (editable PowerPoint)](presentations/Denester_PLC_HMI_Replacement_Kickoff_2026-11-24.pptx)
+- [Meeting plan, risk framing, decision record and RACI](01_Phase1_Feasibility_Study/03_Stakeholder_Kickoff_Packs/04_Production_OT_QA_Approval_Kickoff_2026-11-24.md)
+- [Phase 2 GAMP 5 / TrackWise / URS / make-or-buy plan](02_Phase2_Program_and_Planning/01_GAMP5_TrackWise_URS_Make_or_Buy_2026-11-24.md)
+
+> Earlier repository modernization materials below represent preliminary historical concepts (including servo/safety/drive additions, budget estimates and assumptions on the downstream VI qualification boundary); those items are **not part of the current PLC/HMI-only approval request**. Verify exact Siemens lifecycle status and QA impact before making final claims.
+
+---
+
 # `MP1P-Ferring` Syringe Nest Denester Modernization (`S7-300` & `ProTool` → `S7-1500` & `WinCC Unified`)
 
 **ISPE GAMP 5 (2nd Ed.) 4-Phase Modernization Repository** — Upgrading the legacy **CORIMA / IMA Life `MP1P-Ferring`** syringe nest denester (`SIMATIC S7-300 CPU 313C` + `SIMATIC TP170B Color` `ProTool V6.0`) to **`SIMATIC S7-1500 CPU 1512C-1 PN`** and **`SIMATIC HMI MTP700 Unified Comfort`** (`TIA Portal V19/V20`), while preserving the **Hardwired 24VDC Visual Inspection (VI) Validation Firewall** (`Zero Downstream VI Re-Qualification`).
