@@ -1,0 +1,59 @@
+name: One-time Denester slide guide cleanup
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/denester-remove-guides-once.yml'
+permissions:
+  contents: write
+jobs:
+  clean-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Hide editing guides in Denester presentation
+        shell: bash
+        run: |
+          python - <<'PY'
+          import zipfile
+          import pathlib
+          import os
+          import tempfile
+          from xml.etree import ElementTree as ET
+
+          path = pathlib.Path("presentations/Denester_PLC_HMI_Replacement_Kickoff_2026-11-24.pptx")
+          ns = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
+          fd, tempname = tempfile.mkstemp(suffix=".pptx", dir=path.parent)
+          os.close(fd)
+          try:
+              with zipfile.ZipFile(path) as src, zipfile.ZipFile(tempname, "w") as dst:
+                  for member in src.infolist():
+                      data = src.read(member.filename)
+                      if member.filename == "ppt/viewProps.xml":
+                          root = ET.fromstring(data)
+                          for view in root.iter(ns + "cSldViewPr"):
+                              view.set("showGuides", "0")
+                              view.set("showGrid", "0")
+                              for child in list(view):
+                                  if child.tag == ns + "guideLst":
+                                      view.remove(child)
+                          data = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+                      dst.writestr(member, data)
+              with zipfile.ZipFile(tempname) as check:
+                  assert check.testzip() is None
+                  assert b'showGuides="1"' not in check.read("ppt/viewProps.xml")
+              os.replace(tempname, path)
+          finally:
+              if os.path.exists(tempname):
+                  os.remove(tempname)
+          PY
+      - name: Commit cleaned PowerPoint and remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/denester-remove-guides-once.yml
+          git add presentations/Denester_PLC_HMI_Replacement_Kickoff_2026-11-24.pptx
+          git commit -m "Hide PowerPoint editing guides in Denester kickoff deck"
+          git push
